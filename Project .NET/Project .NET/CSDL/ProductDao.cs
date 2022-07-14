@@ -821,8 +821,8 @@ namespace Project.NET.CSDL
                             resultSet.GetString(5));
                     listTopProducer.Add(produccer);
                 }
-                resultSet.Close();
-                connection.Close();
+/*                resultSet.Close();
+                connection.Close();*/
                 return listTopProducer;
             }
             catch (Exception e)
