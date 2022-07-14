@@ -21,7 +21,12 @@ namespace Project.NET.CSDL
             {
                 int offset = (page - 1) * limit;
                 String query = "select * from thongtinlaptop LIMIT @limit OFFSET @offset ";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@limit", limit);
                 ps.Parameters.AddWithValue("@offset", offset);
                 ps.CommandText = query;
@@ -51,6 +56,7 @@ namespace Project.NET.CSDL
                     );
                     listResult.Add(product);
                 }
+                connection.Close();
                 return listResult;
             }
             catch (Exception e)
@@ -65,9 +71,15 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select count(*) as total from thongtinlaptop";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
+                connection.Close();
                 return resultSet.GetInt32("total");
             }
             catch (Exception e)
@@ -83,7 +95,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select * from thongtinlaptop";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
@@ -109,6 +126,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(19));
                     listResult.Add(product);
                 }
+                connection.Close();
                 return listResult;
             }
             catch (Exception e)
@@ -132,7 +150,12 @@ namespace Project.NET.CSDL
                 {
                     query = "select * from thongtinlaptop" + " LIMIT " + "@limit" + " OFFSET " + "@offset";
                 }
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 if (temp != null)
                 {
                     ps.Parameters.AddWithValue("@temp", temp);
@@ -169,11 +192,13 @@ namespace Project.NET.CSDL
                             resultSet.GetString(19));
                     listResult.Add(product);
                 }
+                connection.Close();
             }
             catch (Exception e)
             {
                 throw e;
             }
+            
             return listResult;
         }
 
@@ -183,7 +208,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select * from hangsx";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
@@ -213,7 +243,12 @@ namespace Project.NET.CSDL
                 foreach (ManufacturerModel x in listProducer)
                 {
                     String query = "select * from thongtinlaptop JOIN hangsx on HANG = TENHANG WHERE HANG = @hang ORDER BY thongtinlaptop.GIABAN DESC LIMIT @limit";
-                    MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                    MySqlConnection connection = KetNoi.GetDBConnection();
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
+                    MySqlCommand ps = connection.CreateCommand();
                     ps.Parameters.AddWithValue("@hang", x.TenHang);
                     ps.Parameters.AddWithValue("@limit", num);
                     ps.CommandText = query;
@@ -241,7 +276,9 @@ namespace Project.NET.CSDL
                                 resultSet.GetString(19));
                         listProduct.Add(product);
                     }
+                    connection.Close();
                 }
+               
                 return listProduct;
             }
             catch (Exception e)
@@ -258,7 +295,12 @@ namespace Project.NET.CSDL
                 foreach (ManufacturerModel x in listProducer)
                 {
                     String query = "select * from thongtinlaptop ORDER BY thongtinlaptop.GIABAN DESC LIMIT @limit";
-                    MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                    MySqlConnection connection = KetNoi.GetDBConnection();
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
+                    MySqlCommand ps = connection.CreateCommand();
                     ps.Parameters.AddWithValue("@limit", num);
                     ps.CommandText = query;
                     MySqlDataReader resultSet = ps.ExecuteReader();
@@ -285,6 +327,7 @@ namespace Project.NET.CSDL
                                 resultSet.GetString(19));
                         listProductBestSeller.Add(product);
                     }
+                    connection.Close();
                 }
                 return listProductBestSeller;
             }
@@ -300,7 +343,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", manufacturer);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
@@ -327,7 +375,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(19));
                     listProductManufacturer.Add(product);
                 }
-                //            }
+                connection.Close();
                 return listProductManufacturer;
             }
             catch (Exception e)
@@ -343,7 +391,12 @@ namespace Project.NET.CSDL
             {
                 int offset = (page - 1) * limit;
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang LIMIT " + "@limit" + " OFFSET " + "@offset";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", manufacturer);
                 ps.Parameters.AddWithValue("@limit", limit);
                 ps.Parameters.AddWithValue("@offset", offset);
@@ -372,7 +425,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(19));
                     listProductManufacturer.Add(product);
                 }
-                //            }
+                connection.Close();
                 return listProductManufacturer;
             }
             catch (Exception e)
@@ -396,7 +449,12 @@ namespace Project.NET.CSDL
                 {
                     query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang " + " LIMIT " + "@limit" + " OFFSET " + "@offset";
                 }
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 if (temp != null)
                 {
                     ps.Parameters.AddWithValue("@hang", manufacturer);
@@ -435,7 +493,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(19));
                     listProductManufacturer.Add(product);
                 }
-                //            }
+                connection.Close();
                 return listProductManufacturer;
             }
             catch (Exception e)
@@ -450,7 +508,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "SELECT * FROM HANGSX WHERE TENHANG = @producer";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@producer", producer);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
@@ -465,6 +528,7 @@ namespace Project.NET.CSDL
                     listProducer.Add(produccer);
                 }
                 resultSet.Close();
+                connection.Close();
                 return listProducer;
             }
             catch (Exception e)
@@ -479,7 +543,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE MALAPTOP = @id";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@id", ID);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
@@ -507,6 +576,7 @@ namespace Project.NET.CSDL
                     listProductWithID.Add(product);
                 }
                 resultSet.Close();
+                connection.Close();
                 return listProductWithID;
             }
             catch (Exception e)
@@ -521,7 +591,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", producer);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
@@ -549,6 +624,7 @@ namespace Project.NET.CSDL
                     listProductWithID.Add(product);
                 }
                 resultSet.Close();
+                connection.Close();
                 return listProductWithID;
             }
             catch (Exception e)
@@ -563,7 +639,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select * from hangsx limit @limit";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@limit", num);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
@@ -578,6 +659,7 @@ namespace Project.NET.CSDL
                     listTopProducer.Add(produccer);
                 }
                 resultSet.Close();
+                connection.Close();
                 return listTopProducer;
             }
             catch (Exception e)
@@ -592,7 +674,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select * from THONGTINLAPTOP WHERE GIABAN BETWEEN @highPrice and @lowPrice";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@highPrice", highPrice);
                 ps.Parameters.AddWithValue("@lowPrice", lowPrice);
                 ps.CommandText = query;
@@ -620,6 +707,7 @@ namespace Project.NET.CSDL
                             rs.GetString(19));
                     result.Add(product);
                 }
+                connection.Close();
                 return result;
             }
             catch (Exception e)
@@ -634,7 +722,12 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select * from THONGTINLAPTOP WHERE HANG = @hang AND GIABAN BETWEEN @highPrice and @lowPrice";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", hangSX);
                 ps.Parameters.AddWithValue("@highPrice", highPrice);
                 ps.Parameters.AddWithValue("@lowPrice", lowPrice);
@@ -663,6 +756,7 @@ namespace Project.NET.CSDL
                             rs.GetString(19));
                     result.Add(product);
                 }
+                connection.Close();
                 return result;
             }
             catch (Exception e)
@@ -676,10 +770,16 @@ namespace Project.NET.CSDL
             try
             {
                 String query = "select count(*) as total from thongtinlaptop where hang = @hang";
-                MySqlCommand ps = KetNoi.GetDBConnection().CreateCommand();
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", producer);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
+                connection.Close();
                 return resultSet.GetInt32("total");
             }
             catch (Exception e)
