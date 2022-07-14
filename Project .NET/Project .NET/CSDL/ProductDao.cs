@@ -11,12 +11,12 @@ namespace Project.NET.CSDL
 {
     public class ProductDao
     {
-        //ArrayList listProducer;
-        //int count = 0;
+        List<ManufacturerModel> listProducer;
+        int count = 0;
 
-        public static ArrayList getAllProduct(int limit, int page)
+        public static List<ProductModel> getAllProduct(int limit, int page)
         {
-            ArrayList listResult = new ArrayList();
+            List<ProductModel> listResult = new List<ProductModel>();
             try
             {
                 int offset = (page - 1) * limit;
@@ -36,10 +36,11 @@ namespace Project.NET.CSDL
                 while (resultSet.Read())
                 {
                     ProductModel product = new ProductModel(
+                            resultSet.GetString(0),
                             resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -53,8 +54,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19)
+                            resultSet.GetString(18)
                     );
                     listResult.Add(product);
                 }
@@ -91,9 +91,9 @@ namespace Project.NET.CSDL
             return 0;
         }
 
-        public ArrayList getAllProduct()
+        public List<ProductModel> getAllProduct()
         {
-            ArrayList listResult = new ArrayList();
+            List<ProductModel> listResult = new List<ProductModel>();
             try
             {
                 String query = "select * from thongtinlaptop";
@@ -107,10 +107,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -124,8 +125,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listResult.Add(product);
                 }
                 connection.Close();
@@ -137,9 +137,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getAllProduct(String temp, int limit, int page)
+        public List<ProductModel> getAllProduct(String temp, int limit, int page)
         {
-            ArrayList listResult = new ArrayList();
+            List<ProductModel> listResult = new List<ProductModel>();
             try
             {
                 int offset = (page - 1) * limit;
@@ -192,8 +192,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listResult.Add(product);
                 }
                 connection.Close();
@@ -202,13 +201,13 @@ namespace Project.NET.CSDL
             {
                 throw e;
             }
-            
+
             return listResult;
         }
 
-        public ArrayList getAllProducer()
+        public List<ManufacturerModel> getAllProducer()
         {
-            listProducer = new ArrayList();
+            listProducer = new List<ManufacturerModel>();
             try
             {
                 String query = "select * from hangsx";
@@ -222,12 +221,12 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ManufacturerModel produccer = new ManufacturerModel(resultSet.GetString(1),
+                    ManufacturerModel produccer = new ManufacturerModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
                             resultSet.GetString(3),
                             resultSet.GetString(4),
-                            resultSet.GetString(5),
-                            resultSet.GetString(6));
+                            resultSet.GetString(5));
                     listProducer.Add(produccer);
                 }
                 resultSet.Close();
@@ -239,9 +238,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getTopProduct1(int num)
+        public List<ProductModel> getTopProduct1(int num)
         {
-            ArrayList listProduct = new ArrayList();
+            List<ProductModel> listProduct = new List<ProductModel>();
             try
             {
                 foreach (ManufacturerModel x in listProducer)
@@ -259,10 +258,11 @@ namespace Project.NET.CSDL
                     MySqlDataReader resultSet = ps.ExecuteReader();
                     while (resultSet.Read())
                     {
-                        ProductModel product = new ProductModel(resultSet.GetString(1),
+                        ProductModel product = new ProductModel(resultSet.GetString(0),
+                                resultSet.GetString(1),
                                 resultSet.GetString(2),
-                                resultSet.GetString(3),
-                                resultSet.GetInt32(4),
+                                resultSet.GetInt32(3),
+                                resultSet.GetString(4),
                                 resultSet.GetString(5),
                                 resultSet.GetString(6),
                                 resultSet.GetString(7),
@@ -276,13 +276,12 @@ namespace Project.NET.CSDL
                                 resultSet.GetString(15),
                                 resultSet.GetString(16),
                                 resultSet.GetString(17),
-                                resultSet.GetString(18),
-                                resultSet.GetString(19));
+                                resultSet.GetString(18));
                         listProduct.Add(product);
                     }
                     connection.Close();
                 }
-               
+
                 return listProduct;
             }
             catch (Exception e)
@@ -291,9 +290,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getTopProductBestSeller(int num)
+        public List<ProductModel> getTopProductBestSeller(int num)
         {
-            ArrayList listProductBestSeller = new ArrayList();
+            List<ProductModel> listProductBestSeller = new List<ProductModel>();
             try
             {
                 foreach (ManufacturerModel x in listProducer)
@@ -310,10 +309,11 @@ namespace Project.NET.CSDL
                     MySqlDataReader resultSet = ps.ExecuteReader();
                     while (resultSet.Read())
                     {
-                        ProductModel product = new ProductModel(resultSet.GetString(1),
+                        ProductModel product = new ProductModel(resultSet.GetString(0),
+                                resultSet.GetString(1),
                                 resultSet.GetString(2),
-                                resultSet.GetString(3),
-                                resultSet.GetInt32(4),
+                                resultSet.GetInt32(3),
+                                resultSet.GetString(4),
                                 resultSet.GetString(5),
                                 resultSet.GetString(6),
                                 resultSet.GetString(7),
@@ -327,8 +327,7 @@ namespace Project.NET.CSDL
                                 resultSet.GetString(15),
                                 resultSet.GetString(16),
                                 resultSet.GetString(17),
-                                resultSet.GetString(18),
-                                resultSet.GetString(19));
+                                resultSet.GetString(18));
                         listProductBestSeller.Add(product);
                     }
                     connection.Close();
@@ -341,9 +340,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getProductManufacturer(String manufacturer)
+        public List<ProductModel> getProductManufacturer(String manufacturer)
         {
-            ArrayList listProductManufacturer = new ArrayList();
+            List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
             {
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang";
@@ -358,10 +357,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -375,8 +375,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listProductManufacturer.Add(product);
                 }
                 connection.Close();
@@ -388,9 +387,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getProductManufacturer(String manufacturer, int limit, int page)
+        public List<ProductModel> getProductManufacturer(String manufacturer, int limit, int page)
         {
-            ArrayList listProductManufacturer = new ArrayList();
+            List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
             {
                 int offset = (page - 1) * limit;
@@ -408,10 +407,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -425,8 +425,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listProductManufacturer.Add(product);
                 }
                 connection.Close();
@@ -438,9 +437,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getProductManufacturer(String manufacturer, String temp, int limit, int page)
+        public List<ProductModel> getProductManufacturer(String manufacturer, String temp, int limit, int page)
         {
-            ArrayList listProductManufacturer = new ArrayList();
+            List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
             {
                 int offset = (page - 1) * limit;
@@ -476,10 +475,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -493,8 +493,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listProductManufacturer.Add(product);
                 }
                 connection.Close();
@@ -506,9 +505,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getProducerWithID(String producer)
+        public List<ManufacturerModel> getProducerWithID(String producer)
         {
-            ArrayList listProducer = new ArrayList();
+            List<ManufacturerModel> listProducer = new List<ManufacturerModel>();
             try
             {
                 String query = "SELECT * FROM HANGSX WHERE TENHANG = @producer";
@@ -523,12 +522,12 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ManufacturerModel produccer = new ManufacturerModel(resultSet.GetString(1),
+                    ManufacturerModel produccer = new ManufacturerModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
                             resultSet.GetString(3),
                             resultSet.GetString(4),
-                            resultSet.GetString(5),
-                            resultSet.GetString(6));
+                            resultSet.GetString(5));
                     listProducer.Add(produccer);
                 }
                 resultSet.Close();
@@ -541,9 +540,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getProductWithID(String ID)
+        public List<ProductModel> getProductWithID(String ID)
         {
-            ArrayList listProductWithID = new ArrayList();
+            List<ProductModel> listProductWithID = new List<ProductModel>();
             try
             {
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE MALAPTOP = @id";
@@ -558,10 +557,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -575,8 +575,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listProductWithID.Add(product);
                 }
                 resultSet.Close();
@@ -589,9 +588,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getProductWithProducer(String producer)
+        public List<ProductModel> getProductWithProducer(String producer)
         {
-            ArrayList listProductWithID = new ArrayList();
+            List<ProductModel> listProductWithID = new List<ProductModel>();
             try
             {
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang";
@@ -606,10 +605,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
@@ -623,8 +623,7 @@ namespace Project.NET.CSDL
                             resultSet.GetString(15),
                             resultSet.GetString(16),
                             resultSet.GetString(17),
-                            resultSet.GetString(18),
-                            resultSet.GetString(19));
+                            resultSet.GetString(18));
                     listProductWithID.Add(product);
                 }
                 resultSet.Close();
@@ -637,9 +636,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList getTopProducer(int num)
+        public List<ManufacturerModel> getTopProducer(int num)
         {
-            ArrayList listTopProducer = new ArrayList();
+            List<ManufacturerModel> listTopProducer = new List<ManufacturerModel>();
             try
             {
                 String query = "select * from hangsx limit @limit";
@@ -654,12 +653,12 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ManufacturerModel produccer = new ManufacturerModel(resultSet.GetString(1),
+                    ManufacturerModel produccer = new ManufacturerModel(resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
                             resultSet.GetString(3),
                             resultSet.GetString(4),
-                            resultSet.GetString(5),
-                            resultSet.GetString(6));
+                            resultSet.GetString(5));
                     listTopProducer.Add(produccer);
                 }
                 resultSet.Close();
@@ -672,9 +671,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList sortWithPrice(int highPrice, int lowPrice)
+        public List<ProductModel> sortWithPrice(int highPrice, int lowPrice)
         {
-            ArrayList result = new ArrayList();
+            List<ProductModel> result = new List<ProductModel>();
             try
             {
                 String query = "select * from THONGTINLAPTOP WHERE GIABAN BETWEEN @highPrice and @lowPrice";
@@ -690,10 +689,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader rs = ps.ExecuteReader();
                 while (rs.Read())
                 {
-                    ProductModel product = new ProductModel(rs.GetString(1),
+                    ProductModel product = new ProductModel(rs.GetString(0),
+                            rs.GetString(1),
                             rs.GetString(2),
-                            rs.GetString(3),
-                            rs.GetInt32(4),
+                            rs.GetInt32(3),
+                            rs.GetString(4),
                             rs.GetString(5),
                             rs.GetString(6),
                             rs.GetString(7),
@@ -707,8 +707,7 @@ namespace Project.NET.CSDL
                             rs.GetString(15),
                             rs.GetString(16),
                             rs.GetString(17),
-                            rs.GetString(18),
-                            rs.GetString(19));
+                            rs.GetString(18));
                     result.Add(product);
                 }
                 connection.Close();
@@ -720,9 +719,9 @@ namespace Project.NET.CSDL
             }
         }
 
-        public ArrayList sortPriceWithProducer(int highPrice, int lowPrice, String hangSX)
+        public List<ProductModel> sortPriceWithProducer(int highPrice, int lowPrice, String hangSX)
         {
-            ArrayList result = new ArrayList();
+            List<ProductModel> result = new List<ProductModel>();
             try
             {
                 String query = "select * from THONGTINLAPTOP WHERE HANG = @hang AND GIABAN BETWEEN @highPrice and @lowPrice";
@@ -739,10 +738,11 @@ namespace Project.NET.CSDL
                 MySqlDataReader rs = ps.ExecuteReader();
                 while (rs.Read())
                 {
-                    ProductModel product = new ProductModel(rs.GetString(1),
+                    ProductModel product = new ProductModel(rs.GetString(0),
+                            rs.GetString(1),
                             rs.GetString(2),
-                            rs.GetString(3),
-                            rs.GetInt32(4),
+                            rs.GetInt32(3),
+                            rs.GetString(4),
                             rs.GetString(5),
                             rs.GetString(6),
                             rs.GetString(7),
@@ -756,8 +756,7 @@ namespace Project.NET.CSDL
                             rs.GetString(15),
                             rs.GetString(16),
                             rs.GetString(17),
-                            rs.GetString(18),
-                            rs.GetString(19));
+                            rs.GetString(18));
                     result.Add(product);
                 }
                 connection.Close();
