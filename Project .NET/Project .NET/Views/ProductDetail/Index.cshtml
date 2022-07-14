@@ -1,4 +1,4 @@
-﻿
+﻿@model Project.NET.Models.ProductModel
 @{
     ViewBag.Title = "Product detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -21,11 +21,12 @@
     <script src="~/Scripts/hover-product.js"></script>
     <script src="~/Scripts/view-image-product.js"></script>
 }
+
 <div id="view-image-product">
     <div id="close-view-image-product"><i class="fas fa-times"></i></div>
-    <div class="big-image-view-product" style="background-image: url('../image/dell/dell1/dell1.png')"></div>
+    <div class="big-image-view-product" style="background-image: url(.../@Model.LINKHINH11)"></div>
     <div class="items-image-view-product">
-        <div class="item-image-view-product" style="background-image: url('../image/dell/dell1/dell1.png')"></div>
+        <div class="item-image-view-product" style="background-image: url('../../Content/image/dell/dell1/dell1.png')"></div>
         <div class="item-image-view-product" style="background-image: url('../image/dell/dell1/dell2.png')"></div>
         <div class="item-image-view-product" style="background-image: url('../image/dell/dell1/dell3.png')"></div>
         <div class="item-image-view-product" style="background-image: url('../image/dell/dell1/dell4.png')"></div>
@@ -36,13 +37,13 @@
     <div id="content-product">
         <div class="infor-product">
             <div class="product-details">
-                <div id="product-image" class="product-image" style='background-image: url("../image/dell/dell1/dell1.png")'></div>
+                <div id="product-image" class="product-image" style='background-image: url("../../Content/@Model.LINKHINH11")'></div>
                 <div class="details-image">
-                    <div class="details-image-item" style='background-image: url("../image/dell/dell1/dell1.png")'></div>
-                    <div class="details-image-item" style="background-image: url('../image/dell/dell1/dell2.png')"></div>
-                    <div class="details-image-item" style="background-image: url('../image/dell/dell1/dell3.png')"></div>
-                    <div class="details-image-item" style="background-image: url('../image/dell/dell1/dell4.png')"></div>
-                    <div class="details-image-item" style="background-image: url('../image/dell/dell1/dell5.png')"></div>
+                    <div class="details-image-item" style='background-image: url("../../Content/@Model.LINKHINH11")'></div>
+                    <div class="details-image-item" style="background-image: url('../../Content/@Model.LINKHINH21')"></div>
+                    <div class="details-image-item" style="background-image: url('../../Content/@Model.LINKHINH31')"></div>
+                    <div class="details-image-item" style="background-image: url('../../Content/@Model.LINKHINH41')"></div>
+                    <div class="details-image-item" style="background-image: url('../../Content/@Model.LINKHINH51')"></div>
                 </div>
                 <div class="border-pro"></div>
                 <div class="css-17aam1">
@@ -52,9 +53,9 @@
                 </div>
             </div>
             <div class="product-sale">
-                <h1 class="title-pro">Màn hình LCD VIEWSONIC VP2458 (1920 x 1080/IPS/60Hz/5 ms)</h1>
-                <div class="trademark">Thương hiệu: VIEWSONIC</div>
-                <div class="price-product">6.250.000 VND</div>
+                <h1 class="title-pro">@Model.TENLAPTOP1</h1>
+                <div class="trademark">Thương hiệu: @Model.HANG1</div>
+                <div class="price-product">@Model.GIABAN1 VND</div>
                 <div class="border-pro"></div>
                 <div class="BOXKHUYENMAILIENQUAN">
                     <div class="css-mz7xyg">Khuyến mãi liên quan</div>
@@ -146,26 +147,25 @@
                                         <tr>
                                             <td> CPU</td>
                                             <td>
-                                                AMD Ryzen™ 5 5600H Processor (3.3GHz, 16MB Cache, Up to 4.2GHz, 6
-                                                Cores, 12 Threads)
+                                               @Model.CPU1
                                             </td>
                                         </tr>
                                         <tr>
                                             <td> Memory</td>
-                                            <td> 8GB DDr4 Bus 3200Mhz (2 Slot, 4GB x 02, Dual Chanel)</td>
+                                            <td> @Model.RAM1 DDr4 Bus 3200Mhz (2 Slot, 4GB x 02, Dual Chanel)</td>
                                         </tr>
                                         <tr>
                                             <td> Hard Disk</td>
-                                            <td> 512GB PCIe® NVMe™ M.2 SSD (Support x 1 Slot SSD M2 PCIe)</td>
+                                            <td> @Model.OCUNG1 PCIe® NVMe™ M.2 SSD (Support x 1 Slot SSD M2 PCIe)</td>
                                         </tr>
                                         <tr>
                                             <td> VGA</td>
-                                            <td> NVIDIA® GeForce® GTX1650 with 4GB GDDR6 / AMD Radeon™ Graphics</td>
+                                            <td> @Model.VGA1</td>
                                         </tr>
                                         <tr>
                                             <td> Display</td>
                                             <td>
-                                                16.1 inch Full HD (1920 x 1080) 144Hz IPS Micro Edge Anti Glare 250
+                                                @Model.KICHTHUOCMANHINH1 inch Full HD (1920 x 1080) 144Hz IPS Micro Edge Anti Glare 250
                                                 Nits
                                             </td>
                                         </tr>
@@ -185,11 +185,11 @@
                                         </tr>
                                         <tr>
                                             <td> Battery</td>
-                                            <td> 4 Cells 70 Whrs Battery</td>
+                                            <td> @Model.PIN1</td>
                                         </tr>
                                         <tr>
                                             <td> Weight</td>
-                                            <td> 2,40 Kg</td>
+                                            <td> @Model.KHOILUONG1 Kg</td>
                                         </tr>
                                         <tr>
                                             <td> SoftWare</td>
@@ -204,7 +204,7 @@
                                         </tr>
                                         <tr>
                                             <td> Màu sắc</td>
-                                            <td> Mica Silver</td>
+                                            <td> @Model.MAU1</td>
                                         </tr>
                                         <tr>
                                             <td> Bảo hành</td>

@@ -51,11 +51,59 @@ namespace Project.NET.CSDL
                 }
                 return listResult;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
             return null;
+        }
+        //
+        public ProductModel getDetailProduct(String idProduct)
+        {
+            ProductModel productModel = null;
+            try
+            {
+                String query = "select * from thongtinlaptop where MALAPTOP = @idProduct";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
+                ps.CommandText = query;
+                ps.Parameters.AddWithValue("@idProduct", idProduct);
+                MySqlDataReader resultSet = ps.ExecuteReader();
+                
+                while (resultSet.Read())
+                {
+                    productModel = new ProductModel(
+                        resultSet.GetString(0),
+                            resultSet.GetString(1),
+                            resultSet.GetString(2),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
+                            resultSet.GetString(5),
+                            resultSet.GetString(6),
+                            resultSet.GetString(7),
+                            resultSet.GetString(8),
+                            resultSet.GetString(9),
+                            resultSet.GetString(10),
+                            resultSet.GetString(11),
+                            resultSet.GetString(12),
+                            resultSet.GetString(13),
+                            resultSet.GetString(14),
+                            resultSet.GetString(15),
+                            resultSet.GetString(16),
+                            resultSet.GetString(17),
+                            resultSet.GetString(18));
+                }
+                connection.Close();
+                return productModel;
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
         }
+    }
 }
