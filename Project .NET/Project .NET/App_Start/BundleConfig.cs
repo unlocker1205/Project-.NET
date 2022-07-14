@@ -8,18 +8,7 @@ namespace Project.NET
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
-
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            bundles.Add(new ScriptBundle("~/bundles/ssss").Include(
                       "~/Scripts/BackToTop.js",
                       "~/Scripts/bstable.js",
                       "~/Scripts/CartAtHover.js",
@@ -38,16 +27,28 @@ namespace Project.NET
                       "~/Scripts/view-image-product.js",
                       "~/Scripts/visibleCart.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                       "~/Scripts/BackToTop.js",
+                       "~/Scripts/nav-responsive.js",
+                       "~/Scripts/Scroll-Indicator.js",
+                       "~/Scripts/visibleCart.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/about.css",
-                      "~/Content/admin.css",
-                      "~/Content/cart.css",
-                      "~/Content/cartResponsive.css",
-                      "~/Content/reponsiveProduct.css",
-                      "~/Content/responsiveIndex.css",
-                      "~/Content/style-product.css",
-                      "~/Content/style-tutorial.css",
-                      "~/Content/style.css"));
+                      "~/Content/css/about.css",
+                      "~/Content/css/admin.css",
+                      "~/Content/css/cart.css",
+                      "~/Content/css/cartResponsive.css",
+                      "~/Content/css/loading.css",
+                      "~/Content/css/reponsiveProduct.css",
+                      "~/Content/css/responsiveIndex.css",
+                      "~/Content/css/style-product.css",
+                      "~/Content/css/style-tutorial.css",
+                      "~/Content/css/style.css"));
+
+            bundles.Add(new StyleBundle("~/Content/layoutCSS").Include(
+                      "~/fonts/themify-icons/themify-icons.css",
+                      "~/fonts/font-awesome-4.7.0/css/font-awesome.css",
+                      "~/fonts/font-awesome-4.7.0/css/font-awesome.min.css"));
         }
     }
 }
