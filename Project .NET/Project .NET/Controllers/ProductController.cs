@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Project.NET.CSDL;
+using Project.NET.Models;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +14,9 @@ namespace Project.NET.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View();
+            List<ProductModel> products = ProductDao.getAllProduct();
+            //Session["products"] = products;
+            return View(products);
         }
     }
 }

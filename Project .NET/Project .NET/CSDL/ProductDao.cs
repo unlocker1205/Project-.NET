@@ -11,8 +11,8 @@ namespace Project.NET.CSDL
 {
     public class ProductDao
     {
-        ArrayList listProducer;
-        int count = 0;
+        //ArrayList listProducer;
+        //int count = 0;
 
         public static ArrayList getAllProduct(int limit, int page)
         {
@@ -30,6 +30,8 @@ namespace Project.NET.CSDL
                 ps.Parameters.AddWithValue("@limit", limit);
                 ps.Parameters.AddWithValue("@offset", offset);
                 ps.CommandText = query;
+                ps.Parameters.AddWithValue("@limit", limit);
+                ps.Parameters.AddWithValue("@offset", offset);
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
@@ -171,10 +173,12 @@ namespace Project.NET.CSDL
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
-                    ProductModel product = new ProductModel(resultSet.GetString(1),
+                    ProductModel product = new ProductModel(
+                            resultSet.GetString(0),
+                            resultSet.GetString(1),
                             resultSet.GetString(2),
-                            resultSet.GetString(3),
-                            resultSet.GetInt32(4),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
                             resultSet.GetString(5),
                             resultSet.GetString(6),
                             resultSet.GetString(7),
