@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 @RenderPage("~/Views/Shared/hoverCart.cshtml")
@@ -16,9 +17,10 @@
 {
     <script src="~/Scripts/click-filter.js"></script>
 }
-<div id="content1">
+<div id="content1" style="overflow:auto">
+    <h1>@ViewBag.page</h1>
     <div class="title-pro-all">
-        <div class="logo-lap" style="background-image: url('../image/logo-laptop/msi.png')"></div>
+        <div class="logo-lap" style="background-image: url('/Content/image/logo-laptop/msi.png')"></div>
         <span>TRUE GAMING. SOME ARE PC, WE ARE GAMING</span>
     </div>
     <div class="filter-product">
@@ -30,30 +32,13 @@
                 Thương hiệu
             </div>
             <div class="filter-items">
-                <div class="filter-item">
-                    DELL
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    MSI
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    LENOVO
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    ACER
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    ASUS
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    HP
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
+                @foreach (var manufacturer in ViewBag.manufacturers)
+                {
+                    <div class="filter-item">
+                        @manufacturer.TenHang
+                        <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                    </div>
+                }
             </div>
         </div>
         <div class="filter">
@@ -61,22 +46,13 @@
                 Màu sắc
             </div>
             <div class="filter-items">
-                <div class="filter-item">
-                    Đen
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Xám
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Bạc
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Vàng hồng
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
+                @foreach (var color in ViewBag.colors)
+                {
+                    <div class="filter-item">
+                        @color
+                        <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                    </div>
+                }
             </div>
         </div>
         <div class="filter">
@@ -84,35 +60,13 @@
                 Series CPU
             </div>
             <div class="filter-items">
-                <div class="filter-item">
-                    Core i5
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Core i7
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Ryzen 7
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Core i3
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Ryzen 5
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Ryzen 9
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Core i9
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-
+                @foreach (var serie in ViewBag.series)
+                {
+                    <div class="filter-item">
+                        @serie
+                        <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                    </div>
+                }
             </div>
         </div>
         <div class="filter">
@@ -120,45 +74,28 @@
                 Dung lượng RAM
             </div>
             <div class="filter-items">
-                <div class="filter-item">
-                    4GB
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    8GB
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    16GB
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    32GB
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
+                @foreach (var ram in ViewBag.rams)
+                {
+                    <div class="filter-item">
+                        @ram
+                        <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                    </div>
+                }
             </div>
         </div>
         <div class="filter">
             <div class="title-filter">
-                Series CPU
+                VGA
             </div>
             <div class="filter-items">
-                <div class="filter-item">
-                    Vostro
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Latitude
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Inspiron
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
-                <div class="filter-item">
-                    Gaming
-                    <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                </div>
+                @foreach (var vga in ViewBag.vgas)
+                {
+                    <div class="filter-item">
+                        @vga
+                        <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                    </div>
+                }
+
             </div>
         </div>
 
@@ -168,9 +105,6 @@
             Sắp xếp theo
         </div>
         <div class="filter-items">
-            <!--                <div class="filter-item-another">Bán chạy-->
-            <!--                    <div class="tick tick-another"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>-->
-            <!--                </div>-->
             <div class="filter-item-another">
                 Giá giảm dần
                 <div class="tick tick-another"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
@@ -194,7 +128,7 @@
     </div>
     <div class="cover-all-product">
         <div class="all-product-cover">
-            @foreach (var product in Model)
+            @foreach (var product in ViewBag.products)
             {
                 <div class="hover-all-product">
                     <a class="all-product-item" href="product-page.html">
@@ -218,5 +152,26 @@
         </div>
     </div>
     <div class="dots-slick"></div>
+    <ul class="my-pagination">
+        @if (ViewBag.currentPage != 1)
+        {
+            <li><a href="/Product?page=@(ViewBag.currentPage - 1)" class="paging">< Back</a></li>
+        }
+        @for (int i = 1; i < ViewBag.endPage; i++)
+        {
+            if (i == ViewBag.currentPage)
+            {
+                <li><a href="/Product?page=@i" class="paging active">@i</a></li>
+            }
+            if (i != ViewBag.currentPage)
+            {
+                <li><a href="/Product?page=@i" class="paging">@i</a></li>
+            }
+        }
+        @if (ViewBag.currentPage != ViewBag.endPage - 1)
+        {
+            <li><a href="/Product?page=@(ViewBag.currentPage + 1) " class="paging">Continue ></a></li>
+        }
+    </ul>
 </div>
 

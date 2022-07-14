@@ -19,19 +19,16 @@ namespace Project.NET.CSDL
             List<ProductModel> listResult = new List<ProductModel>();
             try
             {
-                int offset = (page - 1) * limit;
-                String query = "select * from thongtinlaptop LIMIT @limit OFFSET @offset ";
+                String query = "select * from thongtinlaptop LIMIT @limit OFFSET @offset";
                 MySqlConnection connection = KetNoi.GetDBConnection();
                 if (connection.State == System.Data.ConnectionState.Closed)
                 {
                     connection.Open();
                 }
                 MySqlCommand ps = connection.CreateCommand();
-                ps.Parameters.AddWithValue("@limit", limit);
-                ps.Parameters.AddWithValue("@offset", offset);
                 ps.CommandText = query;
                 ps.Parameters.AddWithValue("@limit", limit);
-                ps.Parameters.AddWithValue("@offset", offset);
+                ps.Parameters.AddWithValue("@offset", page);
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
                 {
@@ -83,7 +80,7 @@ namespace Project.NET.CSDL
                 ps.CommandText = query;
                 ps.Parameters.AddWithValue("@idProduct", idProduct);
                 MySqlDataReader resultSet = ps.ExecuteReader();
-                
+
                 while (resultSet.Read())
                 {
                     productModel = new ProductModel(
@@ -115,11 +112,10 @@ namespace Project.NET.CSDL
                 throw e;
             }
         }
-            return null;
-        }
 
         public static int getTotalPage()
         {
+            int result = 0;
             try
             {
                 String query = "select count(*) as total from thongtinlaptop";
@@ -131,16 +127,19 @@ namespace Project.NET.CSDL
                 MySqlCommand ps = connection.CreateCommand();
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
+                resultSet.Read();
+                result = resultSet.GetInt32("total");
                 connection.Close();
-                return resultSet.GetInt32("total");
+                return result;
             }
             catch (Exception e)
             {
                 throw e;
             }
-            return 0;
+            return result;
         }
 
+        //Luan
         public static List<ProductModel> getAllProduct()
         {
             List<ProductModel> listResult = new List<ProductModel>();
@@ -187,6 +186,117 @@ namespace Project.NET.CSDL
             }
         }
 
+        public static List<String> getAllColor()
+        {
+            List<String> listResult = new List<String>();
+            try
+            {
+                String query = "select distinct MAU from thongtinlaptop";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
+                ps.CommandText = query;
+                MySqlDataReader resultSet = ps.ExecuteReader();
+                while (resultSet.Read())
+                {
+                    listResult.Add(resultSet.GetString(0));
+                }
+                connection.Close();
+                return listResult;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public static List<String> getAllRam()
+        {
+            List<String> listResult = new List<String>();
+            try
+            {
+                String query = "select distinct RAM from thongtinlaptop";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
+                ps.CommandText = query;
+                MySqlDataReader resultSet = ps.ExecuteReader();
+                while (resultSet.Read())
+                {
+                    listResult.Add(resultSet.GetString(0));
+                }
+                connection.Close();
+                return listResult;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<String> getAllSeries()
+        {
+            List<String> listResult = new List<String>();
+            try
+            {
+                String query = "select distinct SERIES from thongtinlaptop";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
+                ps.CommandText = query;
+                MySqlDataReader resultSet = ps.ExecuteReader();
+                while (resultSet.Read())
+                {
+                    listResult.Add(resultSet.GetString(0));
+                }
+                connection.Close();
+                return listResult;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public static List<String> getAllVGAs()
+        {
+            List<String> listResult = new List<String>();
+            try
+            {
+                String query = "select distinct VGA from thongtinlaptop";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
+                ps.CommandText = query;
+                MySqlDataReader resultSet = ps.ExecuteReader();
+                while (resultSet.Read())
+                {
+                    String vgaName = resultSet.GetString(0);
+                    String name = vgaName.Split(' ')[0];
+                    if (!listResult.Contains(name))
+                        listResult.Add(name);
+                }
+                connection.Close();
+                return listResult;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        // Luan
         public static List<ProductModel> getAllProduct(String temp, int limit, int page)
         {
             List<ProductModel> listResult = new List<ProductModel>();
@@ -842,4 +952,6 @@ namespace Project.NET.CSDL
             return 0;
         }
     }
+
+    
 }

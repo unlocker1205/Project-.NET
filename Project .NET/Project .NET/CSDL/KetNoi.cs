@@ -14,7 +14,7 @@ namespace Project.NET.CSDL
             int port = 3306;
             String database = "laptopsellingwebsite";
             String username = "root";
-            String password = "1234";
+            String password = "";
             return CauHinh.GetDBConnection(host, port, database, username, password);
         }
     }
