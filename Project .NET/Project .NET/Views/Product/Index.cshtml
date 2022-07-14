@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    
 }
 
 @RenderPage("~/Views/Shared/hoverCart.cshtml")
@@ -194,7 +195,7 @@
     </div>
     <div class="cover-all-product">
         <div class="all-product-cover">
-            @foreach (var product in Model)
+            @foreach (var product in ViewBag.products)
             {
                 <div class="hover-all-product">
                     <a class="all-product-item" href="product-page.html">

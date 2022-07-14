@@ -61,11 +61,11 @@ namespace Project.NET.CSDL
         public static List<ProductModel> getAllProduct()
         {
             List<ProductModel> listResult = new List<ProductModel>();
-            //try
-            //{
+            try
+            {
                 String query = "select * from thongtinlaptop";
                 MySqlConnection connection = KetNoi.GetDBConnection();
-                if(connection.State == System.Data.ConnectionState.Closed)
+                if (connection.State == System.Data.ConnectionState.Closed)
                 {
                     connection.Open();
                 }
@@ -99,11 +99,11 @@ namespace Project.NET.CSDL
                 }
                 connection.Close();
                 return listResult;
-            //}
-            //catch (Exception e)
-            //{
-            //    throw e;
-            //}
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

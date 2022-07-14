@@ -14,9 +14,10 @@ namespace Project.NET.Controllers
         // GET: Product
         public ActionResult Index()
         {
+            
             List<ProductModel> products = ProductDao.getAllProduct();
-            //Session["products"] = products;
-            return View(products);
+            ViewBag.products = products;
+            return View();
         }
     }
 }
