@@ -266,6 +266,7 @@
     <Compile Include="Controllers\ProductDetailController.cs" />
     <Compile Include="CSDL\CauHinh.cs" />
     <Compile Include="CSDL\KetNoi.cs" />
+    <Compile Include="CSDL\ProductDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
