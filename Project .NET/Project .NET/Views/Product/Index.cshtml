@@ -5,10 +5,19 @@
 }
 
 @RenderPage("~/Views/Shared/hoverCart.cshtml")
+@section css
+{
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/responsiveIndex.css" rel="stylesheet">
+}
+
+@section scriptPage
+{
+    <script src="~/Scripts/click-filter.js"></script>
+}
 <div id="content1">
     <div class="title-pro-all">
         <div class="logo-lap" style="background-image: url('../image/logo-laptop/msi.png')"></div>
-        <!--        <h1 class="title-all-product-item">MSI</h1>-->
         <span>TRUE GAMING. SOME ARE PC, WE ARE GAMING</span>
     </div>
     <div class="filter-product">
@@ -665,9 +674,3 @@
     <div class="dots-slick"></div>
 </div>
 
-
-@section scriptPage
-{
-    <script src="~/Scripts/slider.js"></script>
-    <script src="~/Scripts/product-bestseller.js"></script>
-}

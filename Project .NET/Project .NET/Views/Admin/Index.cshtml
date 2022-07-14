@@ -5,17 +5,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@ViewBag.title</title>
-    <link href="~/Content/image/logo-re.png" rel="icon">
-    @Styles.Render("~/Content/layoutCSS")
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metaverse Laptop</title>
+    <link rel="icon" href="../image/logo-re.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/admin.css" class="css">
+    <link href="~/fonts/themify-icons/themify-icons.css" rel="stylesheet">
+    <link href="~/fonts/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
           integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-          referrerpolicy="no-referrer" rel="stylesheet" />
-    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-          integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
           referrerpolicy="no-referrer" rel="stylesheet" />
 </head>
 <body>
@@ -445,6 +449,7 @@
     <!--Back to top-->
     <button id="myBtn">&#8593;</button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="~/Scripts/bstable.js"></script>
     <script>
         var example1 = new BSTable("table1", {
             $addButton: $('#addRow'),
@@ -503,6 +508,7 @@
         });
         example8.init();
     </script>
-    @Scripts.Render("~/bundles/js");
+    <script src="~/Scripts/BackToTop.js"></script>
+    <script src="~/Scripts/tabs.js"></script>
 </body>
 </html>

@@ -5,6 +5,18 @@
 }
 
 @RenderPage("~/Views/Shared/hoverCart.cshtml")
+@section css
+{
+    <link href="~/Content/css/cart.css" rel="stylesheet">
+    <link href="~/Content/css/responsiveIndex.css" rel="stylesheet">
+    <link href="~/Content/css/cartResponsive.css" rel="stylesheet">
+}
+
+@section scriptPage
+{
+    <script src="~/Scripts/slick-all-product.js"></script>
+    <script src="~/Scripts/click-filter.js"></script>
+}
 <div class="cart" class="bg-gray">
     <div class="container padding padding-top-60">
         <div class="address-menu">
@@ -387,9 +399,3 @@
 
     </div>
 </div>
-
-@section scriptPage
-{
-    <script src="~/Scripts/slider.js"></script>
-    <script src="~/Scripts/product-bestseller.js"></script>
-}

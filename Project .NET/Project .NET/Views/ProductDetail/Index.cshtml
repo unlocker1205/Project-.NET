@@ -5,6 +5,22 @@
 }
 
 @RenderPage("~/Views/Shared/hoverCart.cshtml")
+@section css
+{
+    <link href="~/Content/css/style-product.css" rel="stylesheet">
+    <link href="~/Content/css/responsiveIndex.css" rel="stylesheet">
+    <link href="~/Content/css/reponsiveProduct.css" rel="stylesheet">
+}
+
+@section scriptPage
+{
+    <script src="~/Scripts/CartAtHover.js"></script>
+    <script src="~/Scripts/ripple-button.js"></script>
+    <script src="~/Scripts/product-bestseller.js"></script>
+    <script src="~/Scripts/clickAddCart.js"></script>
+    <script src="~/Scripts/hover-product.js"></script>
+    <script src="~/Scripts/view-image-product.js"></script>
+}
 <div id="view-image-product">
     <div id="close-view-image-product"><i class="fas fa-times"></i></div>
     <div class="big-image-view-product" style="background-image: url('../image/dell/dell1/dell1.png')"></div>
@@ -354,9 +370,3 @@
         </div>
     </div>
 </div>
-
-@section scriptPage
-{
-    <script src="~/Scripts/slider.js"></script>
-    <script src="~/Scripts/product-bestseller.js"></script>
-}

@@ -8,25 +8,6 @@ namespace Project.NET
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/ssss").Include(
-                      "~/Scripts/BackToTop.js",
-                      "~/Scripts/bstable.js",
-                      "~/Scripts/CartAtHover.js",
-                      "~/Scripts/click-filter.js",
-                      "~/Scripts/clickAddCart.js",
-                      "~/Scripts/hover-product.js",
-                      "~/Scripts/nav-responsive.js",
-                      "~/Scripts/product-bestseller.js",
-                      "~/Scripts/register.js",
-                      "~/Scripts/ripple-button.js",
-                      "~/Scripts/Scroll-Indicator.js",
-                      "~/Scripts/slick-all-product.js",
-                      "~/Scripts/slider.js",
-                      "~/Scripts/tabs-table.js",
-                      "~/Scripts/tabs.js",
-                      "~/Scripts/view-image-product.js",
-                      "~/Scripts/visibleCart.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                        "~/Scripts/BackToTop.js",
                        "~/Scripts/nav-responsive.js",
