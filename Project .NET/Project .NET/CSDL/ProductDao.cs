@@ -11,8 +11,8 @@ namespace Project.NET.CSDL
 {
     public class ProductDao
     {
-        List<ManufacturerModel> listProducer;
-        int count = 0;
+        public static List<ManufacturerModel> listProducer;
+        public static int count = 0;
 
         public static List<ProductModel> getAllProduct(int limit, int page)
         {
@@ -68,7 +68,7 @@ namespace Project.NET.CSDL
             return null;
         }
 
-        public int getTotalPage()
+        public static int getTotalPage()
         {
             try
             {
@@ -91,7 +91,7 @@ namespace Project.NET.CSDL
             return 0;
         }
 
-        public List<ProductModel> getAllProduct()
+        public static List<ProductModel> getAllProduct()
         {
             List<ProductModel> listResult = new List<ProductModel>();
             try
@@ -137,7 +137,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getAllProduct(String temp, int limit, int page)
+        public static List<ProductModel> getAllProduct(String temp, int limit, int page)
         {
             List<ProductModel> listResult = new List<ProductModel>();
             try
@@ -205,7 +205,7 @@ namespace Project.NET.CSDL
             return listResult;
         }
 
-        public List<ManufacturerModel> getAllProducer()
+        public static List<ManufacturerModel> getAllProducer()
         {
             listProducer = new List<ManufacturerModel>();
             try
@@ -238,7 +238,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getTopProduct1(int num)
+        public static List<ProductModel> getTopProduct1(int num)
         {
             List<ProductModel> listProduct = new List<ProductModel>();
             try
@@ -290,7 +290,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getTopProductBestSeller(int num)
+        public static List<ProductModel> getTopProductBestSeller(int num)
         {
             List<ProductModel> listProductBestSeller = new List<ProductModel>();
             try
@@ -340,7 +340,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getProductManufacturer(String manufacturer)
+        public static List<ProductModel> getProductManufacturer(String manufacturer)
         {
             List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
@@ -387,7 +387,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getProductManufacturer(String manufacturer, int limit, int page)
+        public static List<ProductModel> getProductManufacturer(String manufacturer, int limit, int page)
         {
             List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
@@ -437,7 +437,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getProductManufacturer(String manufacturer, String temp, int limit, int page)
+        public static List<ProductModel> getProductManufacturer(String manufacturer, String temp, int limit, int page)
         {
             List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
@@ -505,7 +505,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ManufacturerModel> getProducerWithID(String producer)
+        public static List<ManufacturerModel> getProducerWithID(String producer)
         {
             List<ManufacturerModel> listProducer = new List<ManufacturerModel>();
             try
@@ -540,7 +540,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getProductWithID(String ID)
+        public static List<ProductModel> getProductWithID(String ID)
         {
             List<ProductModel> listProductWithID = new List<ProductModel>();
             try
@@ -588,7 +588,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> getProductWithProducer(String producer)
+        public static List<ProductModel> getProductWithProducer(String producer)
         {
             List<ProductModel> listProductWithID = new List<ProductModel>();
             try
@@ -636,7 +636,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ManufacturerModel> getTopProducer(int num)
+        public static List<ManufacturerModel> getTopProducer(int num)
         {
             List<ManufacturerModel> listTopProducer = new List<ManufacturerModel>();
             try
@@ -671,7 +671,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> sortWithPrice(int highPrice, int lowPrice)
+        public static List<ProductModel> sortWithPrice(int highPrice, int lowPrice)
         {
             List<ProductModel> result = new List<ProductModel>();
             try
@@ -719,7 +719,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public List<ProductModel> sortPriceWithProducer(int highPrice, int lowPrice, String hangSX)
+        public static List<ProductModel> sortPriceWithProducer(int highPrice, int lowPrice, String hangSX)
         {
             List<ProductModel> result = new List<ProductModel>();
             try
@@ -768,7 +768,7 @@ namespace Project.NET.CSDL
             }
         }
 
-        public int getTotalPageByProducer(String producer)
+        public static int getTotalPageByProducer(String producer)
         {
             try
             {
