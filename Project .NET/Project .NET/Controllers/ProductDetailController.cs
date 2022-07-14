@@ -14,7 +14,7 @@ namespace Project.NET.Controllers
         public ActionResult Index(String id)
         {
            ProductDao productDao = new ProductDao();
-           ProductModel productModel = productDao.getDetailProduct("0WT8R1");
+           ProductModel productModel = productDao.getDetailProduct(id);
            return View(productModel);
         }
     }

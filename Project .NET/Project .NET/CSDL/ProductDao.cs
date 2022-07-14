@@ -83,7 +83,7 @@ namespace Project.NET.CSDL
                 ps.CommandText = query;
                 ps.Parameters.AddWithValue("@idProduct", idProduct);
                 MySqlDataReader resultSet = ps.ExecuteReader();
-                
+
                 while (resultSet.Read())
                 {
                     productModel = new ProductModel(
@@ -114,8 +114,6 @@ namespace Project.NET.CSDL
             {
                 throw e;
             }
-        }
-            return null;
         }
 
         public static int getTotalPage()
@@ -842,4 +840,6 @@ namespace Project.NET.CSDL
             return 0;
         }
     }
+
+    
 }
