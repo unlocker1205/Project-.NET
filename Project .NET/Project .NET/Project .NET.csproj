@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
@@ -1444,6 +1445,1458 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ED9BD44-27D3-44CE-8B4B-8FD0F394B7A1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project.NET</RootNamespace>
+    <AssemblyName>Project.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44377</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.6.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.6\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductDetailController.cs" />
+    <Compile Include="CSDL\CauHinh.cs" />
+    <Compile Include="CSDL\KetNoi.cs" />
+    <Compile Include="CSDL\MultiMap.cs" />
+    <Compile Include="CSDL\ProductDao.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManufacturerModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\about.css" />
+    <Content Include="Content\css\admin.css" />
+    <Content Include="Content\css\cart.css" />
+    <Content Include="Content\css\cartResponsive.css" />
+    <Content Include="Content\css\reponsiveProduct.css" />
+    <Content Include="Content\css\responsiveIndex.css" />
+    <Content Include="Content\css\style-product.css" />
+    <Content Include="Content\css\style-tutorial.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\image\acer\aspire-3-black\1.png" />
+    <Content Include="Content\image\acer\aspire-3-black\2.png" />
+    <Content Include="Content\image\acer\aspire-3-black\3.png" />
+    <Content Include="Content\image\acer\aspire-3-black\4.png" />
+    <Content Include="Content\image\acer\aspire-3-black\5.png" />
+    <Content Include="Content\image\acer\aspire-3-black\6.png" />
+    <Content Include="Content\image\acer\aspire-3-silver\1.png" />
+    <Content Include="Content\image\acer\aspire-3-silver\2.png" />
+    <Content Include="Content\image\acer\aspire-3-silver\3.png" />
+    <Content Include="Content\image\acer\aspire-3-silver\4.png" />
+    <Content Include="Content\image\acer\aspire-3-silver\5.png" />
+    <Content Include="Content\image\acer\aspire-5-black\1.png" />
+    <Content Include="Content\image\acer\aspire-5-black\2.png" />
+    <Content Include="Content\image\acer\aspire-5-black\3.png" />
+    <Content Include="Content\image\acer\aspire-5-black\4.png" />
+    <Content Include="Content\image\acer\aspire-5-black\5.png" />
+    <Content Include="Content\image\acer\aspire-5-silver\1.png" />
+    <Content Include="Content\image\acer\aspire-5-silver\2.png" />
+    <Content Include="Content\image\acer\aspire-5-silver\3.png" />
+    <Content Include="Content\image\acer\aspire-5-silver\4.png" />
+    <Content Include="Content\image\acer\aspire-5-silver\5.png" />
+    <Content Include="Content\image\acer\aspire-7-black\1.png" />
+    <Content Include="Content\image\acer\aspire-7-black\2.png" />
+    <Content Include="Content\image\acer\aspire-7-black\3.png" />
+    <Content Include="Content\image\acer\aspire-7-black\4.png" />
+    <Content Include="Content\image\acer\aspire-7-black\5.png" />
+    <Content Include="Content\image\acer\aspire-7-black\6.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\1.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\2.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\3.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\4.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\5.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\6.png" />
+    <Content Include="Content\image\acer\nitro-5-eagle\7.png" />
+    <Content Include="Content\image\acer\nitro-5\1.png" />
+    <Content Include="Content\image\acer\nitro-5\2.png" />
+    <Content Include="Content\image\acer\nitro-5\3.png" />
+    <Content Include="Content\image\acer\nitro-5\4.png" />
+    <Content Include="Content\image\acer\nitro-5\5.png" />
+    <Content Include="Content\image\acer\nitro-5\6.png" />
+    <Content Include="Content\image\acer\nitro-5\7.png" />
+    <Content Include="Content\image\acer\predator-helios\1.png" />
+    <Content Include="Content\image\acer\predator-helios\2.png" />
+    <Content Include="Content\image\acer\predator-helios\3.png" />
+    <Content Include="Content\image\acer\predator-helios\4.png" />
+    <Content Include="Content\image\acer\predator-helios\5.png" />
+    <Content Include="Content\image\acer\spin-3\1.png" />
+    <Content Include="Content\image\acer\spin-3\2.png" />
+    <Content Include="Content\image\acer\spin-3\3.png" />
+    <Content Include="Content\image\acer\spin-3\4.png" />
+    <Content Include="Content\image\acer\spin-3\5.png" />
+    <Content Include="Content\image\acer\swift-3-gold\1.png" />
+    <Content Include="Content\image\acer\swift-3-gold\2.png" />
+    <Content Include="Content\image\acer\swift-3-gold\3.png" />
+    <Content Include="Content\image\acer\swift-3-gold\4.png" />
+    <Content Include="Content\image\acer\swift-3-gold\5.png" />
+    <Content Include="Content\image\acer\swift-3-gold\6.png" />
+    <Content Include="Content\image\acer\swift-3-silver\1.png" />
+    <Content Include="Content\image\acer\swift-3-silver\2.png" />
+    <Content Include="Content\image\acer\swift-3-silver\3.png" />
+    <Content Include="Content\image\acer\swift-3-silver\4.png" />
+    <Content Include="Content\image\acer\swift-3-silver\5.png" />
+    <Content Include="Content\image\acer\swift-3\1.png" />
+    <Content Include="Content\image\acer\swift-3\2.png" />
+    <Content Include="Content\image\acer\swift-3\3.png" />
+    <Content Include="Content\image\acer\swift-3\4.png" />
+    <Content Include="Content\image\acer\swift-3\5.png" />
+    <Content Include="Content\image\acer\swift-3\6.png" />
+    <Content Include="Content\image\acer\swift-3\7.png" />
+    <Content Include="Content\image\acer\swift-3\8.png" />
+    <Content Include="Content\image\acer\travelmate-p2\1.png" />
+    <Content Include="Content\image\acer\travelmate-p2\2.png" />
+    <Content Include="Content\image\acer\travelmate-p2\3.png" />
+    <Content Include="Content\image\acer\travelmate-p2\4.png" />
+    <Content Include="Content\image\acer\travelmate-p2\5.png" />
+    <Content Include="Content\image\all-product\unnamed.jpg" />
+    <Content Include="Content\image\asus-logo.png" />
+    <Content Include="Content\image\asuss\asuss %2810%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2810%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2810%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2810%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2810%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2811%29\unnamed %2810%29.png" />
+    <Content Include="Content\image\asuss\asuss %2811%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %2811%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %2811%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %2811%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %2812%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2812%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2812%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2812%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2812%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2813%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2813%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2813%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2813%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2813%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2814%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2814%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2814%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2814%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2814%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2815%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2815%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2815%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2815%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2815%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2816%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2816%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2816%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2816%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2816%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2817%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2817%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2817%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2817%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2817%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2818%29\unnam4ed.png" />
+    <Content Include="Content\image\asuss\asuss %2818%29\unname3d.png" />
+    <Content Include="Content\image\asuss\asuss %2818%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2818%29\unnamed1.png" />
+    <Content Include="Content\image\asuss\asuss %2818%29\unnamed2.png" />
+    <Content Include="Content\image\asuss\asuss %2819%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2819%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2819%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2819%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2819%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %282%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %282%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %282%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %282%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %282%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2820%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2820%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2820%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2820%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2820%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2821%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2821%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2821%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2821%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2821%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2822%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2822%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2822%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2822%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2822%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2823%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2823%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2823%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2823%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2823%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2824%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2824%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2824%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2824%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2824%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2825%29\unnamed %2815%29.png" />
+    <Content Include="Content\image\asuss\asuss %2825%29\unnamed %2816%29.png" />
+    <Content Include="Content\image\asuss\asuss %2825%29\unnamed %2817%29.png" />
+    <Content Include="Content\image\asuss\asuss %2825%29\unnamed %2818%29.png" />
+    <Content Include="Content\image\asuss\asuss %2825%29\unnamed %2819%29.png" />
+    <Content Include="Content\image\asuss\asuss %2826%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %2826%29\unnamed %286%29.png" />
+    <Content Include="Content\image\asuss\asuss %2826%29\unnamed %287%29.png" />
+    <Content Include="Content\image\asuss\asuss %2826%29\unnamed %288%29.png" />
+    <Content Include="Content\image\asuss\asuss %2826%29\unnamed %289%29.png" />
+    <Content Include="Content\image\asuss\asuss %2827%29\unnamed %2810%29.png" />
+    <Content Include="Content\image\asuss\asuss %2827%29\unnamed %286%29.png" />
+    <Content Include="Content\image\asuss\asuss %2827%29\unnamed %287%29.png" />
+    <Content Include="Content\image\asuss\asuss %2827%29\unnamed %288%29.png" />
+    <Content Include="Content\image\asuss\asuss %2827%29\unnamed %289%29.png" />
+    <Content Include="Content\image\asuss\asuss %2828%29\unnam4ed.png" />
+    <Content Include="Content\image\asuss\asuss %2828%29\unname3d.png" />
+    <Content Include="Content\image\asuss\asuss %2828%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2828%29\unnamed1.png" />
+    <Content Include="Content\image\asuss\asuss %2828%29\unnamed2.png" />
+    <Content Include="Content\image\asuss\asuss %2829%29\unnamed %2810%29.png" />
+    <Content Include="Content\image\asuss\asuss %2829%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %2829%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %2829%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %2829%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %283%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %283%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %283%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %283%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %283%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2830%29\unnam4ed.png" />
+    <Content Include="Content\image\asuss\asuss %2830%29\unname3d.png" />
+    <Content Include="Content\image\asuss\asuss %2830%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2830%29\unnamed1.png" />
+    <Content Include="Content\image\asuss\asuss %2830%29\unnamed2.png" />
+    <Content Include="Content\image\asuss\asuss %2831%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2831%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2831%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2831%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2831%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2832%29\unnamed %2810%29.png" />
+    <Content Include="Content\image\asuss\asuss %2832%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %2832%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %2832%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %2832%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %2833%29\unnamed %2810%29.png" />
+    <Content Include="Content\image\asuss\asuss %2833%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %2833%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %2833%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %2833%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %2834%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %2834%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %2834%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %2834%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %2834%29\unnamed %2815%29.png" />
+    <Content Include="Content\image\asuss\asuss %2835%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %2835%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %2835%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %2835%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %2835%29\unnamed %2815%29.png" />
+    <Content Include="Content\image\asuss\asuss %2836%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2836%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2836%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2836%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2836%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2837%29\unnamed %2816%29.png" />
+    <Content Include="Content\image\asuss\asuss %2837%29\unnamed %2817%29.png" />
+    <Content Include="Content\image\asuss\asuss %2837%29\unnamed %2818%29.png" />
+    <Content Include="Content\image\asuss\asuss %2837%29\unnamed %2819%29.png" />
+    <Content Include="Content\image\asuss\asuss %2837%29\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss %2838%29\unnamed %2815%29.png" />
+    <Content Include="Content\image\asuss\asuss %2838%29\unnamed %2816%29.png" />
+    <Content Include="Content\image\asuss\asuss %2838%29\unnamed %2817%29.png" />
+    <Content Include="Content\image\asuss\asuss %2838%29\unnamed %2818%29.png" />
+    <Content Include="Content\image\asuss\asuss %2838%29\unnamed %2819%29.png" />
+    <Content Include="Content\image\asuss\asuss %2839%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2839%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2839%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2839%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2839%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %284%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %284%29\unnamed %286%29.png" />
+    <Content Include="Content\image\asuss\asuss %284%29\unnamed %287%29.png" />
+    <Content Include="Content\image\asuss\asuss %284%29\unnamed %288%29.png" />
+    <Content Include="Content\image\asuss\asuss %284%29\unnamed %289%29.png" />
+    <Content Include="Content\image\asuss\asuss %2840%29\unnamed %281%29.png" />
+    <Content Include="Content\image\asuss\asuss %2840%29\unnamed %282%29.png" />
+    <Content Include="Content\image\asuss\asuss %2840%29\unnamed %283%29.png" />
+    <Content Include="Content\image\asuss\asuss %2840%29\unnamed %284%29.png" />
+    <Content Include="Content\image\asuss\asuss %2840%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %285%29\unnamed %285%29.png" />
+    <Content Include="Content\image\asuss\asuss %285%29\unnamed %286%29.png" />
+    <Content Include="Content\image\asuss\asuss %285%29\unnamed %287%29.png" />
+    <Content Include="Content\image\asuss\asuss %285%29\unnamed %288%29.png" />
+    <Content Include="Content\image\asuss\asuss %285%29\unnamed %289%29.png" />
+    <Content Include="Content\image\asuss\asuss %286%29\unnamed %2810%29.png" />
+    <Content Include="Content\image\asuss\asuss %286%29\unnamed %2811%29.png" />
+    <Content Include="Content\image\asuss\asuss %286%29\unnamed %2812%29.png" />
+    <Content Include="Content\image\asuss\asuss %286%29\unnamed %2813%29.png" />
+    <Content Include="Content\image\asuss\asuss %286%29\unnamed %2814%29.png" />
+    <Content Include="Content\image\asuss\asuss %287%29\unnamed %2815%29.png" />
+    <Content Include="Content\image\asuss\asuss %287%29\unnamed %2816%29.png" />
+    <Content Include="Content\image\asuss\asuss %287%29\unnamed %2817%29.png" />
+    <Content Include="Content\image\asuss\asuss %287%29\unnamed %2818%29.png" />
+    <Content Include="Content\image\asuss\asuss %287%29\unnamed %2819%29.png" />
+    <Content Include="Content\image\asuss\asuss %288%29\unnamed %2820%29.png" />
+    <Content Include="Content\image\asuss\asuss %288%29\unnamed %2821%29.png" />
+    <Content Include="Content\image\asuss\asuss %288%29\unnamed %2822%29.png" />
+    <Content Include="Content\image\asuss\asuss %288%29\unnamed %2823%29.png" />
+    <Content Include="Content\image\asuss\asuss %288%29\unnamed %2824%29.png" />
+    <Content Include="Content\image\asuss\asuss %289%29\unnamed %2825%29.png" />
+    <Content Include="Content\image\asuss\asuss %289%29\unnamed %2826%29.png" />
+    <Content Include="Content\image\asuss\asuss %289%29\unnamed %2827%29.png" />
+    <Content Include="Content\image\asuss\asuss %289%29\unnamed %2828%29.png" />
+    <Content Include="Content\image\asuss\asuss %289%29\unnamed %2829%29.png" />
+    <Content Include="Content\image\asuss\asuss\unnam4ed.png" />
+    <Content Include="Content\image\asuss\asuss\unname3d.png" />
+    <Content Include="Content\image\asuss\asuss\unnamed.png" />
+    <Content Include="Content\image\asuss\asuss\unnamed1.png" />
+    <Content Include="Content\image\asuss\asuss\unnamed2.png" />
+    <Content Include="Content\image\dell\dell10\dell1.png" />
+    <Content Include="Content\image\dell\dell10\dell2.png" />
+    <Content Include="Content\image\dell\dell10\dell3.png" />
+    <Content Include="Content\image\dell\dell10\dell4.png" />
+    <Content Include="Content\image\dell\dell10\dell5.png" />
+    <Content Include="Content\image\dell\dell11\dell1.png" />
+    <Content Include="Content\image\dell\dell11\dell2.png" />
+    <Content Include="Content\image\dell\dell11\dell3.png" />
+    <Content Include="Content\image\dell\dell11\dell4.png" />
+    <Content Include="Content\image\dell\dell11\dell5.png" />
+    <Content Include="Content\image\dell\dell12\dell1.png" />
+    <Content Include="Content\image\dell\dell12\dell2.png" />
+    <Content Include="Content\image\dell\dell12\dell3.png" />
+    <Content Include="Content\image\dell\dell12\dell4.png" />
+    <Content Include="Content\image\dell\dell12\dell5.png" />
+    <Content Include="Content\image\dell\dell13\dell1.png" />
+    <Content Include="Content\image\dell\dell13\dell2.png" />
+    <Content Include="Content\image\dell\dell13\dell3.png" />
+    <Content Include="Content\image\dell\dell13\dell4.png" />
+    <Content Include="Content\image\dell\dell13\dell5.png" />
+    <Content Include="Content\image\dell\dell14\dell1.png" />
+    <Content Include="Content\image\dell\dell14\dell2.png" />
+    <Content Include="Content\image\dell\dell14\dell3.png" />
+    <Content Include="Content\image\dell\dell14\dell4.png" />
+    <Content Include="Content\image\dell\dell15\dell1.png" />
+    <Content Include="Content\image\dell\dell15\dell2.png" />
+    <Content Include="Content\image\dell\dell15\dell3.png" />
+    <Content Include="Content\image\dell\dell15\dell4.png" />
+    <Content Include="Content\image\dell\dell15\dell5.png" />
+    <Content Include="Content\image\dell\dell16\dell1.png" />
+    <Content Include="Content\image\dell\dell16\dell2.png" />
+    <Content Include="Content\image\dell\dell16\dell3.png" />
+    <Content Include="Content\image\dell\dell16\dell4.png" />
+    <Content Include="Content\image\dell\dell17\dell1.png" />
+    <Content Include="Content\image\dell\dell17\dell2.png" />
+    <Content Include="Content\image\dell\dell17\dell3.png" />
+    <Content Include="Content\image\dell\dell18\dell1.png" />
+    <Content Include="Content\image\dell\dell18\dell2.png" />
+    <Content Include="Content\image\dell\dell18\dell3.png" />
+    <Content Include="Content\image\dell\dell18\dell4.png" />
+    <Content Include="Content\image\dell\dell18\dell5.png" />
+    <Content Include="Content\image\dell\dell19\dell1.png" />
+    <Content Include="Content\image\dell\dell19\dell2.png" />
+    <Content Include="Content\image\dell\dell19\dell3.png" />
+    <Content Include="Content\image\dell\dell19\dell4.png" />
+    <Content Include="Content\image\dell\dell19\dell5.png" />
+    <Content Include="Content\image\dell\dell1\dell1.png" />
+    <Content Include="Content\image\dell\dell1\dell2.png" />
+    <Content Include="Content\image\dell\dell1\dell3.png" />
+    <Content Include="Content\image\dell\dell1\dell4.png" />
+    <Content Include="Content\image\dell\dell1\dell5.png" />
+    <Content Include="Content\image\dell\dell1\dell6.png" />
+    <Content Include="Content\image\dell\dell20\dell1.png" />
+    <Content Include="Content\image\dell\dell20\dell2.png" />
+    <Content Include="Content\image\dell\dell20\dell3.png" />
+    <Content Include="Content\image\dell\dell20\dell4.png" />
+    <Content Include="Content\image\dell\dell20\dell5.png" />
+    <Content Include="Content\image\dell\dell21\dell1.png" />
+    <Content Include="Content\image\dell\dell21\dell2.png" />
+    <Content Include="Content\image\dell\dell21\dell3.png" />
+    <Content Include="Content\image\dell\dell21\dell4.png" />
+    <Content Include="Content\image\dell\dell21\dell5.png" />
+    <Content Include="Content\image\dell\dell22\dell1.png" />
+    <Content Include="Content\image\dell\dell22\dell2.png" />
+    <Content Include="Content\image\dell\dell22\dell3.png" />
+    <Content Include="Content\image\dell\dell22\dell4.png" />
+    <Content Include="Content\image\dell\dell22\dell5.png" />
+    <Content Include="Content\image\dell\dell23\dell1.png" />
+    <Content Include="Content\image\dell\dell23\dell2.png" />
+    <Content Include="Content\image\dell\dell23\dell3.png" />
+    <Content Include="Content\image\dell\dell23\dell4.png" />
+    <Content Include="Content\image\dell\dell23\dell5.png" />
+    <Content Include="Content\image\dell\dell24\dell1.png" />
+    <Content Include="Content\image\dell\dell24\dell2.png" />
+    <Content Include="Content\image\dell\dell24\dell3.png" />
+    <Content Include="Content\image\dell\dell24\dell4.png" />
+    <Content Include="Content\image\dell\dell25\dell1.png" />
+    <Content Include="Content\image\dell\dell25\dell2.png" />
+    <Content Include="Content\image\dell\dell25\dell3.png" />
+    <Content Include="Content\image\dell\dell25\dell4.png" />
+    <Content Include="Content\image\dell\dell2\dell1.png" />
+    <Content Include="Content\image\dell\dell2\dell2.png" />
+    <Content Include="Content\image\dell\dell2\dell3.png" />
+    <Content Include="Content\image\dell\dell2\dell4.png" />
+    <Content Include="Content\image\dell\dell2\dell5.png" />
+    <Content Include="Content\image\dell\dell2\dell6.png" />
+    <Content Include="Content\image\dell\dell3\dell1.png" />
+    <Content Include="Content\image\dell\dell3\dell2.png" />
+    <Content Include="Content\image\dell\dell3\dell3.png" />
+    <Content Include="Content\image\dell\dell3\dell4.png" />
+    <Content Include="Content\image\dell\dell3\dell5.png" />
+    <Content Include="Content\image\dell\dell3\dell6.png" />
+    <Content Include="Content\image\dell\dell4\dell1.png" />
+    <Content Include="Content\image\dell\dell4\dell2.png" />
+    <Content Include="Content\image\dell\dell4\dell3.png" />
+    <Content Include="Content\image\dell\dell4\dell4.png" />
+    <Content Include="Content\image\dell\dell4\dell5.png" />
+    <Content Include="Content\image\dell\dell4\dell6.png" />
+    <Content Include="Content\image\dell\dell5\dell1.png" />
+    <Content Include="Content\image\dell\dell5\dell2.png" />
+    <Content Include="Content\image\dell\dell5\dell3.png" />
+    <Content Include="Content\image\dell\dell5\dell4.png" />
+    <Content Include="Content\image\dell\dell5\dell5.png" />
+    <Content Include="Content\image\dell\dell6\dell1.png" />
+    <Content Include="Content\image\dell\dell6\dell2.png" />
+    <Content Include="Content\image\dell\dell6\dell3.png" />
+    <Content Include="Content\image\dell\dell6\dell4.png" />
+    <Content Include="Content\image\dell\dell6\dell5.png" />
+    <Content Include="Content\image\dell\dell7\dell1.png" />
+    <Content Include="Content\image\dell\dell7\dell2.png" />
+    <Content Include="Content\image\dell\dell7\dell3.png" />
+    <Content Include="Content\image\dell\dell7\dell4.png" />
+    <Content Include="Content\image\dell\dell7\dell5.png" />
+    <Content Include="Content\image\dell\dell8\dell1.png" />
+    <Content Include="Content\image\dell\dell8\dell2.png" />
+    <Content Include="Content\image\dell\dell8\dell3.png" />
+    <Content Include="Content\image\dell\dell8\dell4.png" />
+    <Content Include="Content\image\dell\dell8\dell5.png" />
+    <Content Include="Content\image\dell\dell9\dell1.png" />
+    <Content Include="Content\image\dell\dell9\dell2.png" />
+    <Content Include="Content\image\dell\dell9\dell3.png" />
+    <Content Include="Content\image\dell\dell9\dell4.png" />
+    <Content Include="Content\image\dell\dell9\dell5.png" />
+    <Content Include="Content\image\giga\giga 1\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 1\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 1\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 1\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 1\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga 2\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 2\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 2\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 2\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 2\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga 3\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 3\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 3\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 3\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 3\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga 4\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 4\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 4\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 4\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 4\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga 5\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 5\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 5\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 5\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 5\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga 6\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 6\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 6\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 6\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 6\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga 7\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga 7\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga 7\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga 7\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga 7\unnamed %289%29.png" />
+    <Content Include="Content\image\giga\giga\unnamed %285%29.png" />
+    <Content Include="Content\image\giga\giga\unnamed %286%29.png" />
+    <Content Include="Content\image\giga\giga\unnamed %287%29.png" />
+    <Content Include="Content\image\giga\giga\unnamed %288%29.png" />
+    <Content Include="Content\image\giga\giga\unnamed %289%29.png" />
+    <Content Include="Content\image\hp\elitebook-x360\1.png" />
+    <Content Include="Content\image\hp\elitebook-x360\2.png" />
+    <Content Include="Content\image\hp\elitebook-x360\3.png" />
+    <Content Include="Content\image\hp\elitebook-x360\4.png" />
+    <Content Include="Content\image\hp\elitebook-x360\5.png" />
+    <Content Include="Content\image\hp\elitebook-x360\6.png" />
+    <Content Include="Content\image\hp\elitebook\1.png" />
+    <Content Include="Content\image\hp\elitebook\2.png" />
+    <Content Include="Content\image\hp\elitebook\3.png" />
+    <Content Include="Content\image\hp\elitebook\4.png" />
+    <Content Include="Content\image\hp\elitebook\5.png" />
+    <Content Include="Content\image\hp\envy-13\1.png" />
+    <Content Include="Content\image\hp\envy-13\2.png" />
+    <Content Include="Content\image\hp\envy-13\3.png" />
+    <Content Include="Content\image\hp\envy-13\4.png" />
+    <Content Include="Content\image\hp\envy-13\5.png" />
+    <Content Include="Content\image\hp\omen-15\1.png" />
+    <Content Include="Content\image\hp\omen-15\2.png" />
+    <Content Include="Content\image\hp\omen-15\3.png" />
+    <Content Include="Content\image\hp\omen-15\4.png" />
+    <Content Include="Content\image\hp\omen-15\5.png" />
+    <Content Include="Content\image\hp\omen-16\1.png" />
+    <Content Include="Content\image\hp\omen-16\2.png" />
+    <Content Include="Content\image\hp\omen-16\3.png" />
+    <Content Include="Content\image\hp\omen-16\4.png" />
+    <Content Include="Content\image\hp\pavilion-gaming\1.png" />
+    <Content Include="Content\image\hp\pavilion-gaming\2.png" />
+    <Content Include="Content\image\hp\pavilion-gaming\3.png" />
+    <Content Include="Content\image\hp\pavilion-gaming\4.png" />
+    <Content Include="Content\image\hp\pavilion-gaming\5.png" />
+    <Content Include="Content\image\hp\pavilion\1.png" />
+    <Content Include="Content\image\hp\pavilion\2.png" />
+    <Content Include="Content\image\hp\pavilion\3.png" />
+    <Content Include="Content\image\hp\pavilion\4.png" />
+    <Content Include="Content\image\hp\pavilion\5.png" />
+    <Content Include="Content\image\hp\pavilion\6.png" />
+    <Content Include="Content\image\hp\probook-240\1.png" />
+    <Content Include="Content\image\hp\probook-240\2.png" />
+    <Content Include="Content\image\hp\probook-240\3.png" />
+    <Content Include="Content\image\hp\probook-240\4.png" />
+    <Content Include="Content\image\hp\probook-240\5.png" />
+    <Content Include="Content\image\hp\probook-480\1.png" />
+    <Content Include="Content\image\hp\probook-480\2.png" />
+    <Content Include="Content\image\hp\probook-480\3.png" />
+    <Content Include="Content\image\hp\probook-480\4.png" />
+    <Content Include="Content\image\hp\probook-480\5.png" />
+    <Content Include="Content\image\hp\victus\1.png" />
+    <Content Include="Content\image\hp\victus\2.png" />
+    <Content Include="Content\image\hp\victus\3.png" />
+    <Content Include="Content\image\hp\victus\4.png" />
+    <Content Include="Content\image\icon-product\baotri.png" />
+    <Content Include="Content\image\icon-product\camket.png" />
+    <Content Include="Content\image\icon-product\doitra.png" />
+    <Content Include="Content\image\icon-product\free-ship.png" />
+    <Content Include="Content\image\icon-product\ship.png" />
+    <Content Include="Content\image\icon-product\suachua.png" />
+    <Content Include="Content\image\image99.png" />
+    <Content Include="Content\image\img_11.png" />
+    <Content Include="Content\image\img_2.png" />
+    <Content Include="Content\image\img_3.png" />
+    <Content Include="Content\image\img_4.png" />
+    <Content Include="Content\image\img_5.png" />
+    <Content Include="Content\image\img_6.png" />
+    <Content Include="Content\image\img_7.png" />
+    <Content Include="Content\image\img_8.png" />
+    <Content Include="Content\image\logo lap\acer.png" />
+    <Content Include="Content\image\logo lap\asus.png" />
+    <Content Include="Content\image\logo lap\dell.png" />
+    <Content Include="Content\image\logo lap\gigabyte.png" />
+    <Content Include="Content\image\logo lap\hp.png" />
+    <Content Include="Content\image\logo lap\microsoft.png" />
+    <Content Include="Content\image\logo lap\msi.png" />
+    <Content Include="Content\image\logo-laptop\acer.png" />
+    <Content Include="Content\image\logo-laptop\asus.png" />
+    <Content Include="Content\image\logo-laptop\dell.png" />
+    <Content Include="Content\image\logo-laptop\gigabyte.png" />
+    <Content Include="Content\image\logo-laptop\hp.png" />
+    <Content Include="Content\image\logo-laptop\microsoft.png" />
+    <Content Include="Content\image\logo-laptop\msi.png" />
+    <Content Include="Content\image\logo-re.png" />
+    <Content Include="Content\image\logo.png" />
+    <Content Include="Content\image\man-hinh-asus.jpg" />
+    <Content Include="Content\image\member\locngu.jpg" />
+    <Content Include="Content\image\member\minhquan.jpg" />
+    <Content Include="Content\image\member\quocthinh.jpg" />
+    <Content Include="Content\image\member\tanloc.jpg" />
+    <Content Include="Content\image\micro\micro 1\unnamed %281%29.png" />
+    <Content Include="Content\image\micro\micro 1\unnamed %282%29.png" />
+    <Content Include="Content\image\micro\micro 1\unnamed %283%29.png" />
+    <Content Include="Content\image\micro\micro 1\unnamed %284%29.png" />
+    <Content Include="Content\image\micro\micro 1\unnamed.png" />
+    <Content Include="Content\image\micro\micro\unnamed %281%29.png" />
+    <Content Include="Content\image\micro\micro\unnamed %282%29.png" />
+    <Content Include="Content\image\micro\micro\unnamed %283%29.png" />
+    <Content Include="Content\image\micro\micro\unnamed %284%29.png" />
+    <Content Include="Content\image\micro\micro\unnamed.png" />
+    <Content Include="Content\image\msi\msi10\msi1.png" />
+    <Content Include="Content\image\msi\msi10\msi2.png" />
+    <Content Include="Content\image\msi\msi10\msi3.png" />
+    <Content Include="Content\image\msi\msi10\msi4.png" />
+    <Content Include="Content\image\msi\msi11\msi1.png" />
+    <Content Include="Content\image\msi\msi11\msi2.png" />
+    <Content Include="Content\image\msi\msi11\msi3.png" />
+    <Content Include="Content\image\msi\msi11\msi4.png" />
+    <Content Include="Content\image\msi\msi11\msi5.png" />
+    <Content Include="Content\image\msi\msi12\msi1.png" />
+    <Content Include="Content\image\msi\msi12\msi2.png" />
+    <Content Include="Content\image\msi\msi12\msi3.png" />
+    <Content Include="Content\image\msi\msi12\msi4.png" />
+    <Content Include="Content\image\msi\msi12\msi5.png" />
+    <Content Include="Content\image\msi\msi13\msi1.png" />
+    <Content Include="Content\image\msi\msi13\msi2.png" />
+    <Content Include="Content\image\msi\msi13\msi3.png" />
+    <Content Include="Content\image\msi\msi13\msi4.png" />
+    <Content Include="Content\image\msi\msi13\msi5.png" />
+    <Content Include="Content\image\msi\msi14\msi1.png" />
+    <Content Include="Content\image\msi\msi14\msi2.png" />
+    <Content Include="Content\image\msi\msi14\msi3.png" />
+    <Content Include="Content\image\msi\msi14\msi4.png" />
+    <Content Include="Content\image\msi\msi14\msi5.png" />
+    <Content Include="Content\image\msi\msi15\msi1.png" />
+    <Content Include="Content\image\msi\msi15\msi2.png" />
+    <Content Include="Content\image\msi\msi15\msi3.png" />
+    <Content Include="Content\image\msi\msi15\msi4.png" />
+    <Content Include="Content\image\msi\msi15\msi5.png" />
+    <Content Include="Content\image\msi\msi16\msi1.png" />
+    <Content Include="Content\image\msi\msi16\msi2.png" />
+    <Content Include="Content\image\msi\msi16\msi3.png" />
+    <Content Include="Content\image\msi\msi16\msi4.png" />
+    <Content Include="Content\image\msi\msi16\msi5.png" />
+    <Content Include="Content\image\msi\msi17\msi1.png" />
+    <Content Include="Content\image\msi\msi17\msi2.png" />
+    <Content Include="Content\image\msi\msi17\msi3.png" />
+    <Content Include="Content\image\msi\msi17\msi4.png" />
+    <Content Include="Content\image\msi\msi17\msi5.png" />
+    <Content Include="Content\image\msi\msi18\msi1.png" />
+    <Content Include="Content\image\msi\msi18\msi2.png" />
+    <Content Include="Content\image\msi\msi18\msi3.png" />
+    <Content Include="Content\image\msi\msi18\msi4.png" />
+    <Content Include="Content\image\msi\msi18\msi5.png" />
+    <Content Include="Content\image\msi\msi19\msi1.png" />
+    <Content Include="Content\image\msi\msi19\msi2.png" />
+    <Content Include="Content\image\msi\msi19\msi3.png" />
+    <Content Include="Content\image\msi\msi19\msi4.png" />
+    <Content Include="Content\image\msi\msi19\msi5.png" />
+    <Content Include="Content\image\msi\msi1\msi1.png" />
+    <Content Include="Content\image\msi\msi1\msi2.png" />
+    <Content Include="Content\image\msi\msi1\msi3.png" />
+    <Content Include="Content\image\msi\msi1\msi4.png" />
+    <Content Include="Content\image\msi\msi1\msi5.png" />
+    <Content Include="Content\image\msi\msi20\msi1.png" />
+    <Content Include="Content\image\msi\msi20\msi2.png" />
+    <Content Include="Content\image\msi\msi20\msi3.png" />
+    <Content Include="Content\image\msi\msi20\msi4.png" />
+    <Content Include="Content\image\msi\msi20\msi5.png" />
+    <Content Include="Content\image\msi\msi21\msi1.png" />
+    <Content Include="Content\image\msi\msi21\msi2.png" />
+    <Content Include="Content\image\msi\msi21\msi3.png" />
+    <Content Include="Content\image\msi\msi21\msi4.png" />
+    <Content Include="Content\image\msi\msi21\msi5.png" />
+    <Content Include="Content\image\msi\msi22\msi1.png" />
+    <Content Include="Content\image\msi\msi22\msi2.png" />
+    <Content Include="Content\image\msi\msi22\msi3.png" />
+    <Content Include="Content\image\msi\msi22\msi4.png" />
+    <Content Include="Content\image\msi\msi22\msi5.png" />
+    <Content Include="Content\image\msi\msi23\msi1.png" />
+    <Content Include="Content\image\msi\msi23\msi2.png" />
+    <Content Include="Content\image\msi\msi23\msi3.png" />
+    <Content Include="Content\image\msi\msi23\msi4.png" />
+    <Content Include="Content\image\msi\msi23\msi5.png" />
+    <Content Include="Content\image\msi\msi24\msi1.png" />
+    <Content Include="Content\image\msi\msi24\msi2.png" />
+    <Content Include="Content\image\msi\msi24\msi3.png" />
+    <Content Include="Content\image\msi\msi25\msi1.png" />
+    <Content Include="Content\image\msi\msi25\msi2.png" />
+    <Content Include="Content\image\msi\msi25\msi3.png" />
+    <Content Include="Content\image\msi\msi25\msi4.png" />
+    <Content Include="Content\image\msi\msi25\msi5.png" />
+    <Content Include="Content\image\msi\msi2\msi1.png" />
+    <Content Include="Content\image\msi\msi2\msi2.png" />
+    <Content Include="Content\image\msi\msi2\msi3.png" />
+    <Content Include="Content\image\msi\msi2\msi4.png" />
+    <Content Include="Content\image\msi\msi2\msi5.png" />
+    <Content Include="Content\image\msi\msi3\msi1.png" />
+    <Content Include="Content\image\msi\msi3\msi2.png" />
+    <Content Include="Content\image\msi\msi3\msi3.png" />
+    <Content Include="Content\image\msi\msi3\msi4.png" />
+    <Content Include="Content\image\msi\msi3\msi5.png" />
+    <Content Include="Content\image\msi\msi4\msi1.png" />
+    <Content Include="Content\image\msi\msi4\msi2.png" />
+    <Content Include="Content\image\msi\msi4\msi3.png" />
+    <Content Include="Content\image\msi\msi4\msi4.png" />
+    <Content Include="Content\image\msi\msi4\msi5.png" />
+    <Content Include="Content\image\msi\msi5\msi1.png" />
+    <Content Include="Content\image\msi\msi5\msi2.png" />
+    <Content Include="Content\image\msi\msi5\msi3.png" />
+    <Content Include="Content\image\msi\msi5\msi4.png" />
+    <Content Include="Content\image\msi\msi5\msi5.png" />
+    <Content Include="Content\image\msi\msi6\msi1.png" />
+    <Content Include="Content\image\msi\msi6\msi2.png" />
+    <Content Include="Content\image\msi\msi6\msi3.png" />
+    <Content Include="Content\image\msi\msi6\msi4.png" />
+    <Content Include="Content\image\msi\msi6\msi5.png" />
+    <Content Include="Content\image\msi\msi7\msi1.png" />
+    <Content Include="Content\image\msi\msi7\msi2.png" />
+    <Content Include="Content\image\msi\msi7\msi3.png" />
+    <Content Include="Content\image\msi\msi7\msi4.png" />
+    <Content Include="Content\image\msi\msi7\msi5.png" />
+    <Content Include="Content\image\msi\msi8\msi1.png" />
+    <Content Include="Content\image\msi\msi8\msi2.png" />
+    <Content Include="Content\image\msi\msi8\msi3.png" />
+    <Content Include="Content\image\msi\msi8\msi4.png" />
+    <Content Include="Content\image\msi\msi8\msi5.png" />
+    <Content Include="Content\image\msi\msi9\msi1.png" />
+    <Content Include="Content\image\msi\msi9\msi2.png" />
+    <Content Include="Content\image\msi\msi9\msi3.png" />
+    <Content Include="Content\image\msi\msi9\msi4.png" />
+    <Content Include="Content\image\not found\no-products-found.png" />
+    <Content Include="Content\image\poster\acer\acer.png" />
+    <Content Include="Content\image\poster\asus\asus.png" />
+    <Content Include="Content\image\poster\asus\asus1.png" />
+    <Content Include="Content\image\poster\dell\dell.png" />
+    <Content Include="Content\image\poster\gigabyte\gigabyte.png" />
+    <Content Include="Content\image\poster\hp\hp.png" />
+    <Content Include="Content\image\poster\microsoft\microsoft.png" />
+    <Content Include="Content\image\poster\msi\msi.png" />
+    <Content Include="Content\image\slider\Slider-image1.jpg" />
+    <Content Include="Content\image\slider\Slider-image2.jpg" />
+    <Content Include="Content\image\slider\Slider-image3.jpg" />
+    <Content Include="Content\image\slider\Slider-image4.jpg" />
+    <Content Include="Content\image\slider\Slider-image5.jpg" />
+    <Content Include="Content\image\Tutorial\tutorial-fogot.png" />
+    <Content Include="Content\image\Tutorial\tutorial-login.png" />
+    <Content Include="Content\image\Tutorial\tutorial-register.png" />
+    <Content Include="Content\image\Tutorial\tutorial1.png" />
+    <Content Include="Content\image\Tutorial\tutorial2.png" />
+    <Content Include="Content\image\Tutorial\tutorial3.png" />
+    <Content Include="Content\image\Tutorial\tutorial4.png" />
+    <Content Include="Content\image\Tutorial\tutorial5.png" />
+    <Content Include="Content\image\Tutorial\tutorial6.png" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="fonts\themify-icons\demo-files\demo.css" />
+    <Content Include="fonts\themify-icons\fonts\themify.svg" />
+    <Content Include="fonts\themify-icons\ie7\ie7.css" />
+    <Content Include="fonts\themify-icons\ie7\ie7.js" />
+    <Content Include="fonts\themify-icons\index.html" />
+    <Content Include="fonts\themify-icons\readme.txt" />
+    <Content Include="fonts\themify-icons\SVG\agenda.svg" />
+    <Content Include="fonts\themify-icons\SVG\alarm-clock.svg" />
+    <Content Include="fonts\themify-icons\SVG\alert.svg" />
+    <Content Include="fonts\themify-icons\SVG\align-center.svg" />
+    <Content Include="fonts\themify-icons\SVG\align-justify.svg" />
+    <Content Include="fonts\themify-icons\SVG\align-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\align-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\anchor.svg" />
+    <Content Include="fonts\themify-icons\SVG\android.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-double-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-double-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-double-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-double-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\angle-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\announcement.svg" />
+    <Content Include="fonts\themify-icons\SVG\apple.svg" />
+    <Content Include="fonts\themify-icons\SVG\archive.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-circle-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-circle-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-circle-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-circle-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-top-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-top-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrow.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrows-corner.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrows-horizontal.svg" />
+    <Content Include="fonts\themify-icons\SVG\arrows-vertical.svg" />
+    <Content Include="fonts\themify-icons\SVG\back-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\back-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\bag.svg" />
+    <Content Include="fonts\themify-icons\SVG\bar-chart-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\bar-chart.svg" />
+    <Content Include="fonts\themify-icons\SVG\basketball.svg" />
+    <Content Include="fonts\themify-icons\SVG\bell.svg" />
+    <Content Include="fonts\themify-icons\SVG\blackboard.svg" />
+    <Content Include="fonts\themify-icons\SVG\bolt-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\bolt.svg" />
+    <Content Include="fonts\themify-icons\SVG\book.svg" />
+    <Content Include="fonts\themify-icons\SVG\bookmark-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\bookmark.svg" />
+    <Content Include="fonts\themify-icons\SVG\briefcase.svg" />
+    <Content Include="fonts\themify-icons\SVG\brush-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\brush.svg" />
+    <Content Include="fonts\themify-icons\SVG\calendar.svg" />
+    <Content Include="fonts\themify-icons\SVG\camera.svg" />
+    <Content Include="fonts\themify-icons\SVG\car.svg" />
+    <Content Include="fonts\themify-icons\SVG\check-box.svg" />
+    <Content Include="fonts\themify-icons\SVG\check.svg" />
+    <Content Include="fonts\themify-icons\SVG\clip.svg" />
+    <Content Include="fonts\themify-icons\SVG\clipboard.svg" />
+    <Content Include="fonts\themify-icons\SVG\close.svg" />
+    <Content Include="fonts\themify-icons\SVG\cloud-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\cloud-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\cloud.svg" />
+    <Content Include="fonts\themify-icons\SVG\comment-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\comment.svg" />
+    <Content Include="fonts\themify-icons\SVG\comments-smiley.svg" />
+    <Content Include="fonts\themify-icons\SVG\comments.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-backward.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-eject.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-forward.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-pause.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-play.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-record.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-shuffle.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-skip-backward.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-skip-forward.svg" />
+    <Content Include="fonts\themify-icons\SVG\control-stop.svg" />
+    <Content Include="fonts\themify-icons\SVG\credit-card.svg" />
+    <Content Include="fonts\themify-icons\SVG\crown.svg" />
+    <Content Include="fonts\themify-icons\SVG\css3.svg" />
+    <Content Include="fonts\themify-icons\SVG\cup.svg" />
+    <Content Include="fonts\themify-icons\SVG\cut.svg" />
+    <Content Include="fonts\themify-icons\SVG\dashboard.svg" />
+    <Content Include="fonts\themify-icons\SVG\desktop.svg" />
+    <Content Include="fonts\themify-icons\SVG\direction-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\direction.svg" />
+    <Content Include="fonts\themify-icons\SVG\download.svg" />
+    <Content Include="fonts\themify-icons\SVG\dribbble.svg" />
+    <Content Include="fonts\themify-icons\SVG\dropbox-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\dropbox.svg" />
+    <Content Include="fonts\themify-icons\SVG\drupal.svg" />
+    <Content Include="fonts\themify-icons\SVG\email.svg" />
+    <Content Include="fonts\themify-icons\SVG\envelope.svg" />
+    <Content Include="fonts\themify-icons\SVG\eraser.svg" />
+    <Content Include="fonts\themify-icons\SVG\exchange-vertical.svg" />
+    <Content Include="fonts\themify-icons\SVG\export.svg" />
+    <Content Include="fonts\themify-icons\SVG\eye.svg" />
+    <Content Include="fonts\themify-icons\SVG\face-sad.svg" />
+    <Content Include="fonts\themify-icons\SVG\face-smile.svg" />
+    <Content Include="fonts\themify-icons\SVG\facebook.svg" />
+    <Content Include="fonts\themify-icons\SVG\file.svg" />
+    <Content Include="fonts\themify-icons\SVG\files.svg" />
+    <Content Include="fonts\themify-icons\SVG\filter.svg" />
+    <Content Include="fonts\themify-icons\SVG\flag-alt-2.svg" />
+    <Content Include="fonts\themify-icons\SVG\flag-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\flag.svg" />
+    <Content Include="fonts\themify-icons\SVG\flickr-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\flickr.svg" />
+    <Content Include="fonts\themify-icons\SVG\folder.svg" />
+    <Content Include="fonts\themify-icons\SVG\fullscreen.svg" />
+    <Content Include="fonts\themify-icons\SVG\gallery.svg" />
+    <Content Include="fonts\themify-icons\SVG\game.svg" />
+    <Content Include="fonts\themify-icons\SVG\gift.svg" />
+    <Content Include="fonts\themify-icons\SVG\github.svg" />
+    <Content Include="fonts\themify-icons\SVG\google.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-drag.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-open.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-point-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-point-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-point-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-point-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\hand-stop.svg" />
+    <Content Include="fonts\themify-icons\SVG\harddrive.svg" />
+    <Content Include="fonts\themify-icons\SVG\harddrives.svg" />
+    <Content Include="fonts\themify-icons\SVG\headphone-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\headphone.svg" />
+    <Content Include="fonts\themify-icons\SVG\heart-broken.svg" />
+    <Content Include="fonts\themify-icons\SVG\heart.svg" />
+    <Content Include="fonts\themify-icons\SVG\help-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\help.svg" />
+    <Content Include="fonts\themify-icons\SVG\home.svg" />
+    <Content Include="fonts\themify-icons\SVG\html5.svg" />
+    <Content Include="fonts\themify-icons\SVG\hummer.svg" />
+    <Content Include="fonts\themify-icons\SVG\id-badge.svg" />
+    <Content Include="fonts\themify-icons\SVG\image.svg" />
+    <Content Include="fonts\themify-icons\SVG\import.svg" />
+    <Content Include="fonts\themify-icons\SVG\infinite.svg" />
+    <Content Include="fonts\themify-icons\SVG\info-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\info.svg" />
+    <Content Include="fonts\themify-icons\SVG\ink-pen.svg" />
+    <Content Include="fonts\themify-icons\SVG\instagram.svg" />
+    <Content Include="fonts\themify-icons\SVG\Italic.svg" />
+    <Content Include="fonts\themify-icons\SVG\joomla.svg" />
+    <Content Include="fonts\themify-icons\SVG\jsfiddle.svg" />
+    <Content Include="fonts\themify-icons\SVG\key.svg" />
+    <Content Include="fonts\themify-icons\SVG\layers-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layers.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-accordion-list.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-accordion-merged.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-accordion-separated.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-column2-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-column2.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-column3-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-column3.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-column4-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-column4.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-cta-btn-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-cta-btn-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-cta-center.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-cta-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-cta-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid2-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid2-thumb.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid2.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid3-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid3.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid4-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-grid4.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-line-solid.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-list-large-image.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-list-post.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-list-thumb-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-list-thumb.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-center-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-center.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-left-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-overlay-alt-2.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-overlay-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-overlay.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-right-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-media-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-menu-full.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-menu-separated.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-menu-v.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-menu.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-placeholder.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-sidebar-2.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-sidebar-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-sidebar-none.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-sidebar-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-slider-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-slider.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-tab-min.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-tab-v.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-tab-window.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-tab.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-width-default-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-width-default.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout-width-full.svg" />
+    <Content Include="fonts\themify-icons\SVG\layout.svg" />
+    <Content Include="fonts\themify-icons\SVG\light-bulb.svg" />
+    <Content Include="fonts\themify-icons\SVG\line-dashed.svg" />
+    <Content Include="fonts\themify-icons\SVG\line-dotted.svg" />
+    <Content Include="fonts\themify-icons\SVG\line-double.svg" />
+    <Content Include="fonts\themify-icons\SVG\link.svg" />
+    <Content Include="fonts\themify-icons\SVG\linkedin.svg" />
+    <Content Include="fonts\themify-icons\SVG\linux.svg" />
+    <Content Include="fonts\themify-icons\SVG\list-ol.svg" />
+    <Content Include="fonts\themify-icons\SVG\list.svg" />
+    <Content Include="fonts\themify-icons\SVG\location-arrow.svg" />
+    <Content Include="fonts\themify-icons\SVG\location-pin.svg" />
+    <Content Include="fonts\themify-icons\SVG\lock.svg" />
+    <Content Include="fonts\themify-icons\SVG\loop.svg" />
+    <Content Include="fonts\themify-icons\SVG\magnet.svg" />
+    <Content Include="fonts\themify-icons\SVG\map-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\map.svg" />
+    <Content Include="fonts\themify-icons\SVG\marker-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\marker.svg" />
+    <Content Include="fonts\themify-icons\SVG\medall-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\medall.svg" />
+    <Content Include="fonts\themify-icons\SVG\menu-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\menu.svg" />
+    <Content Include="fonts\themify-icons\SVG\microphone-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\microphone.svg" />
+    <Content Include="fonts\themify-icons\SVG\microsoft-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\microsoft.svg" />
+    <Content Include="fonts\themify-icons\SVG\minus.svg" />
+    <Content Include="fonts\themify-icons\SVG\mobile.svg" />
+    <Content Include="fonts\themify-icons\SVG\money.svg" />
+    <Content Include="fonts\themify-icons\SVG\more-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\more.svg" />
+    <Content Include="fonts\themify-icons\SVG\mouse-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\mouse.svg" />
+    <Content Include="fonts\themify-icons\SVG\music-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\music.svg" />
+    <Content Include="fonts\themify-icons\SVG\na.svg" />
+    <Content Include="fonts\themify-icons\SVG\new-window.svg" />
+    <Content Include="fonts\themify-icons\SVG\notepad.svg" />
+    <Content Include="fonts\themify-icons\SVG\package.svg" />
+    <Content Include="fonts\themify-icons\SVG\paint-bucket.svg" />
+    <Content Include="fonts\themify-icons\SVG\paint-roller.svg" />
+    <Content Include="fonts\themify-icons\SVG\palette.svg" />
+    <Content Include="fonts\themify-icons\SVG\panel.svg" />
+    <Content Include="fonts\themify-icons\SVG\paragraph.svg" />
+    <Content Include="fonts\themify-icons\SVG\pencil-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\pencil-alt2.svg" />
+    <Content Include="fonts\themify-icons\SVG\pencil.svg" />
+    <Content Include="fonts\themify-icons\SVG\pie-chart.svg" />
+    <Content Include="fonts\themify-icons\SVG\pin-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\pin.svg" />
+    <Content Include="fonts\themify-icons\SVG\pin2.svg" />
+    <Content Include="fonts\themify-icons\SVG\pinterest-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\pinterest.svg" />
+    <Content Include="fonts\themify-icons\SVG\plug.svg" />
+    <Content Include="fonts\themify-icons\SVG\plus.svg" />
+    <Content Include="fonts\themify-icons\SVG\power-off.svg" />
+    <Content Include="fonts\themify-icons\SVG\printer.svg" />
+    <Content Include="fonts\themify-icons\SVG\pulse.svg" />
+    <Content Include="fonts\themify-icons\SVG\quote-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\quote-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\receipt.svg" />
+    <Content Include="fonts\themify-icons\SVG\reddit.svg" />
+    <Content Include="fonts\themify-icons\SVG\reload.svg" />
+    <Content Include="fonts\themify-icons\SVG\rocket.svg" />
+    <Content Include="fonts\themify-icons\SVG\rss-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\rss.svg" />
+    <Content Include="fonts\themify-icons\SVG\ruler-alt-2.svg" />
+    <Content Include="fonts\themify-icons\SVG\ruler-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\ruler-pencil.svg" />
+    <Content Include="fonts\themify-icons\SVG\ruler.svg" />
+    <Content Include="fonts\themify-icons\SVG\save-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\save.svg" />
+    <Content Include="fonts\themify-icons\SVG\search.svg" />
+    <Content Include="fonts\themify-icons\SVG\server.svg" />
+    <Content Include="fonts\themify-icons\SVG\settings.svg" />
+    <Content Include="fonts\themify-icons\SVG\share-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\share.svg" />
+    <Content Include="fonts\themify-icons\SVG\sharethis-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\sharethis.svg" />
+    <Content Include="fonts\themify-icons\SVG\shield.svg" />
+    <Content Include="fonts\themify-icons\SVG\shift-left-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\shift-left.svg" />
+    <Content Include="fonts\themify-icons\SVG\shift-right-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\shift-right.svg" />
+    <Content Include="fonts\themify-icons\SVG\shine.svg" />
+    <Content Include="fonts\themify-icons\SVG\shopping-cart-full.svg" />
+    <Content Include="fonts\themify-icons\SVG\shopping-cart.svg" />
+    <Content Include="fonts\themify-icons\SVG\shortcode.svg" />
+    <Content Include="fonts\themify-icons\SVG\signal.svg" />
+    <Content Include="fonts\themify-icons\SVG\skype.svg" />
+    <Content Include="fonts\themify-icons\SVG\slice.svg" />
+    <Content Include="fonts\themify-icons\SVG\smallcap.svg" />
+    <Content Include="fonts\themify-icons\SVG\soundcloud.svg" />
+    <Content Include="fonts\themify-icons\SVG\split-h.svg" />
+    <Content Include="fonts\themify-icons\SVG\split-v-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\split-v.svg" />
+    <Content Include="fonts\themify-icons\SVG\spray.svg" />
+    <Content Include="fonts\themify-icons\SVG\stack-overflow.svg" />
+    <Content Include="fonts\themify-icons\SVG\stamp.svg" />
+    <Content Include="fonts\themify-icons\SVG\star.svg" />
+    <Content Include="fonts\themify-icons\SVG\stats-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\stats-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\support.svg" />
+    <Content Include="fonts\themify-icons\SVG\tablet.svg" />
+    <Content Include="fonts\themify-icons\SVG\tag.svg" />
+    <Content Include="fonts\themify-icons\SVG\target.svg" />
+    <Content Include="fonts\themify-icons\SVG\text.svg" />
+    <Content Include="fonts\themify-icons\SVG\themify-favicon-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\themify-favicon.svg" />
+    <Content Include="fonts\themify-icons\SVG\themify-logo.svg" />
+    <Content Include="fonts\themify-icons\SVG\thought.svg" />
+    <Content Include="fonts\themify-icons\SVG\thumb-down.svg" />
+    <Content Include="fonts\themify-icons\SVG\thumb-up.svg" />
+    <Content Include="fonts\themify-icons\SVG\ticket.svg" />
+    <Content Include="fonts\themify-icons\SVG\time.svg" />
+    <Content Include="fonts\themify-icons\SVG\timer.svg" />
+    <Content Include="fonts\themify-icons\SVG\trash.svg" />
+    <Content Include="fonts\themify-icons\SVG\trello.svg" />
+    <Content Include="fonts\themify-icons\SVG\truck.svg" />
+    <Content Include="fonts\themify-icons\SVG\tumblr-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\tumblr.svg" />
+    <Content Include="fonts\themify-icons\SVG\twitter-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\twitter.svg" />
+    <Content Include="fonts\themify-icons\SVG\underline.svg" />
+    <Content Include="fonts\themify-icons\SVG\unlink.svg" />
+    <Content Include="fonts\themify-icons\SVG\unlock.svg" />
+    <Content Include="fonts\themify-icons\SVG\upload.svg" />
+    <Content Include="fonts\themify-icons\SVG\uppercase.svg" />
+    <Content Include="fonts\themify-icons\SVG\user.svg" />
+    <Content Include="fonts\themify-icons\SVG\vector.svg" />
+    <Content Include="fonts\themify-icons\SVG\video-camera.svg" />
+    <Content Include="fonts\themify-icons\SVG\video-clapper.svg" />
+    <Content Include="fonts\themify-icons\SVG\view-grid.svg" />
+    <Content Include="fonts\themify-icons\SVG\view-list-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\view-list.svg" />
+    <Content Include="fonts\themify-icons\SVG\vimeo-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\vimeo.svg" />
+    <Content Include="fonts\themify-icons\SVG\volume.svg" />
+    <Content Include="fonts\themify-icons\SVG\wallet.svg" />
+    <Content Include="fonts\themify-icons\SVG\wand.svg" />
+    <Content Include="fonts\themify-icons\SVG\wheelchair.svg" />
+    <Content Include="fonts\themify-icons\SVG\widget-alt.svg" />
+    <Content Include="fonts\themify-icons\SVG\widget.svg" />
+    <Content Include="fonts\themify-icons\SVG\widgetized.svg" />
+    <Content Include="fonts\themify-icons\SVG\window.svg" />
+    <Content Include="fonts\themify-icons\SVG\wordpress.svg" />
+    <Content Include="fonts\themify-icons\SVG\world.svg" />
+    <Content Include="fonts\themify-icons\SVG\write.svg" />
+    <Content Include="fonts\themify-icons\SVG\yahoo.svg" />
+    <Content Include="fonts\themify-icons\SVG\youtube.svg" />
+    <Content Include="fonts\themify-icons\SVG\zip.svg" />
+    <Content Include="fonts\themify-icons\SVG\zoom-in.svg" />
+    <Content Include="fonts\themify-icons\SVG\zoom-out.svg" />
+    <Content Include="fonts\themify-icons\themify-icons.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\BackToTop.js" />
+    <Content Include="Scripts\bstable.js" />
+    <Content Include="Scripts\CartAtHover.js" />
+    <Content Include="Scripts\click-filter.js" />
+    <Content Include="Scripts\clickAddCart.js" />
+    <Content Include="Scripts\hover-product.js" />
+    <Content Include="Scripts\nav-responsive.js" />
+    <Content Include="Scripts\product-bestseller.js" />
+    <Content Include="Scripts\register.js" />
+    <Content Include="Scripts\ripple-button.js" />
+    <Content Include="Scripts\Scroll-Indicator.js" />
+    <Content Include="Scripts\slick-all-product.js" />
+    <Content Include="Scripts\slider.js" />
+    <Content Include="Scripts\tabs-table.js" />
+    <Content Include="Scripts\tabs.js" />
+    <Content Include="Scripts\view-image-product.js" />
+    <Content Include="Scripts\visibleCart.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="fonts\themify-icons\fonts\themify.eot" />
+    <Content Include="fonts\themify-icons\fonts\themify.ttf" />
+    <Content Include="fonts\themify-icons\fonts\themify.woff" />
+    <Content Include="fonts\themify-icons\Themify IconFonts 5-23-2014.json" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\header.cshtml" />
+    <Content Include="Views\Shared\footer.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\ProductDetail\Index.cshtml" />
+    <Content Include="Views\Shared\login.cshtml" />
+    <Content Include="Views\Shared\hoverCart.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50016</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44377/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+>>>>>>> main
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
