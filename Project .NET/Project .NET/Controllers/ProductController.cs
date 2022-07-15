@@ -12,7 +12,7 @@ namespace Project.NET.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        public ActionResult Index(String page)
+        public ActionResult Index(String page, String idHang)
         {
             if(page == null)
             {
@@ -29,9 +29,16 @@ namespace Project.NET.Controllers
             ViewBag.series = series;
             ViewBag.rams = rams;
             ViewBag.vgas = vgas;
-
-            int endPage = ProductServices.getNumOfPage(20);
-            List<ProductModel> products = ProductServices.getProductForPage(Int32.Parse(page), 20);
+            int endPage = ProductServices.getNumOfPage(18);
+            List<ProductModel> products = null;
+            if (idHang == null) {
+                products = ProductServices.getProductForPage(Int32.Parse(page), 18);
+            } else
+            {
+                endPage = ProductServices.getNumOfPageManufacturer(idHang, 18);
+                products = ProductDao.getProductManufacturer(idHang, 18, Int32.Parse(page));
+                ViewBag.idHang = idHang;
+            }
             ViewBag.currentPage = Int32.Parse(page);
             ViewBag.endPage = endPage;
             ViewBag.products = products;
@@ -54,6 +61,16 @@ namespace Project.NET.Controllers
         public static int getNumOfPage(int numOfProduct)
         {
             int totalProducts = ProductDao.getTotalPage();
+            int endPage = totalProducts / numOfProduct;
+            if (totalProducts % numOfProduct != 0)
+            {
+                endPage++;
+            }
+            return endPage;
+        }
+        public static int getNumOfPageManufacturer(String idHang, int numOfProduct)
+        {
+            int totalProducts = ProductDao.getTotalPageByProducer(idHang);
             int endPage = totalProducts / numOfProduct;
             if (totalProducts % numOfProduct != 0)
             {
