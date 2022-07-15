@@ -951,6 +951,57 @@ namespace Project.NET.CSDL
             }
             return 0;
         }
+
+        public static List<ProductModel> getCartByUser(String id_user)
+        {
+            List<ProductModel> result = new List<ProductModel>();
+
+            try
+            {
+                //cau SQL thuc thi lay thong tin laptop 
+                String querry = "Select * from THONGTINLAPTOP where malaptop in (select malaptop from CTGH where magiohang in (Select magiohang from giohang where makh = @makh))";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+
+                MySqlCommand ps = connection.CreateCommand();
+                ps.Parameters.AddWithValue("@makh", id_user);
+                ps.CommandText = querry;
+                MySqlDataReader rs = ps.ExecuteReader();
+
+                while (rs.Read())
+                {
+                    ProductModel product = new ProductModel(rs.GetString(0),
+                            rs.GetString(1),
+                            rs.GetString(2),
+                            rs.GetInt32(3),
+                            rs.GetString(4),
+                            rs.GetString(5),
+                            rs.GetString(6),
+                            rs.GetString(7),
+                            rs.GetString(8),
+                            rs.GetString(9),
+                            rs.GetString(10),
+                            rs.GetString(11),
+                            rs.GetString(12),
+                            rs.GetString(13),
+                            rs.GetString(14),
+                            rs.GetString(15),
+                            rs.GetString(16),
+                            rs.GetString(17),
+                            rs.GetString(18));
+                    result.Add(product);
+                }
+                connection.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 
     
