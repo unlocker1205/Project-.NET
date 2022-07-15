@@ -103,32 +103,75 @@
                         <thead>
                             <tr>
                                 <th>MÃ LAPTOP</th>
-                                <th>SỐ LƯỢNG NHẬP</th>
-                                <th>SỐ LƯỢNG XUẤT</th>
-                                <th>TỒN KHO</th>
+                                <th>TÊN LAPTOP</th>
+                                <th>HÃNG SẢN XUẤT</th>
+                                <th>GIÁ BÁN</th>
+                                <th>SERIES</th>
+                                <th>MÀU</th>
+                                <th>CPU</th>
+                                <th>VGA</th>
+                                <th>RAM</th>
+                                <th>KÍCH THƯỚC MÀN HÌNH</th>
+                                <th>Ổ CỨNG</th>
+                                <th>BÀN PHÍM</th>
+                                <th>PIN</th>
+                                <th>KHỐI LƯỢNG</th>
+                                <th>LINK HÌNH 1</th>
+                                <th>LINK HÌNH 2</th>
+                                <th>LINK HÌNH 3</th>
+                                <th>LINK HÌNH 4</th>
+                                <th>LINK HÌNH 5</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            @foreach (var x in ViewBag.store)
-                            {
+                        @foreach (var x in ViewBag.products)
+                        {
+                            <tbody>
                                 <tr>
-                                    <td>@x.maLapTop</td>
-                                    <td>Laptop Dell Vostro 14 3405</td>
-                                    <td>Dell</td>
-                                    <td>16.190.000</td>
+                                    <td>@x.MALAPTOP1</td>
+                                    <td>@x.TENLAPTOP1</td>
+                                    <td>@x.HANG1</td>
+                                    <td>@x.GIABAN1</td>
+                                    <td>@x.SERIES1</td>
+                                    <td>@x.MAU1</td>
+                                    <td>@x.CPU1</td>
+                                    <td>@x.VGA1</td>
+                                    <td>@x.RAM1</td>
+                                    <td>@x.KICHTHUOCMANHINH1</td>
+                                    <td>@x.OCUNG1</td>
+                                    <td>@x.BANPHIM1</td>
+                                    <td>@x.PIN1</td>
+                                    <td>@x.KHOILUONG1</td>
+                                    <td>@x.LINKHINH11</td>
+                                    <td>@x.LINKHINH21</td>
+                                    <td>@x.LINKHINH31</td>
+                                    <td>@x.LINKHINH41</td>
+                                    <td>@x.LINKHINH51</td>
                                 </tr>
-                            }
-                        </tbody>
+                            </tbody>
+                        }
+
                     </table>
                     <div class="clearfix">
                         <ul class="pagination">
-                            <li class="page-item disabled"><a href="#">Previous</a></li>
-                            <li class="page-item"><a href="#" class="page-link">1</a></li>
-                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-                            <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                            <li class="page-item"><a href="#" class="page-link">4</a></li>
-                            <li class="page-item"><a href="#" class="page-link">5</a></li>
-                            <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                            @if (ViewBag.currentPage != 1)
+                            {
+                                <li class="page-item"><a href="?param=thongtinlaptop&page=@(ViewBag.currentPage - 1)">Previous</a></li>
+                            }
+                            @for (int i = 1; i < ViewBag.endPage; i++)
+                            {
+                                if (i == ViewBag.currentPage)
+                                {
+                                    <li class="page-item active"><a href="?param=thongtinlaptop&page=@i" class="page-link">@i</a></li>
+                                }
+                                if (i != ViewBag.currentPage)
+                                {
+                                    <li class="page-item"><a href="?param=thongtinlaptop&page=@i" class="page-link">@i</a></li>
+                                }
+                            }
+                            @if (ViewBag.currentPage != ViewBag.endPage - 1)
+                            {
+                                <li class="page-item"><a href="?param=thongtinlaptop&page=@(ViewBag.currentPage + 1) " class="page-link">Next</a></li>
+                            }
                         </ul>
                     </div>
                 </div>

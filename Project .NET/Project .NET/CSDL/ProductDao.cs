@@ -64,6 +64,57 @@ namespace Project.NET.CSDL
             }
             return null;
         }
+
+        public static List<ProductModel> getAllHangSx(int limit, int page)
+        {
+            List<ProductModel> listResult = new List<ProductModel>();
+            try
+            {
+                String query = "select * from thongtinlaptop LIMIT @limit OFFSET @offset";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                MySqlCommand ps = connection.CreateCommand();
+                ps.CommandText = query;
+                ps.Parameters.AddWithValue("@limit", limit);
+                ps.Parameters.AddWithValue("@offset", page);
+                MySqlDataReader resultSet = ps.ExecuteReader();
+                while (resultSet.Read())
+                {
+                    ProductModel product = new ProductModel(
+                            resultSet.GetString(0),
+                            resultSet.GetString(1),
+                            resultSet.GetString(2),
+                            resultSet.GetInt32(3),
+                            resultSet.GetString(4),
+                            resultSet.GetString(5),
+                            resultSet.GetString(6),
+                            resultSet.GetString(7),
+                            resultSet.GetString(8),
+                            resultSet.GetString(9),
+                            resultSet.GetString(10),
+                            resultSet.GetString(11),
+                            resultSet.GetString(12),
+                            resultSet.GetString(13),
+                            resultSet.GetString(14),
+                            resultSet.GetString(15),
+                            resultSet.GetString(16),
+                            resultSet.GetString(17),
+                            resultSet.GetString(18)
+                    );
+                    listResult.Add(product);
+                }
+                connection.Close();
+                return listResult;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return null;
+        }
         //
         public ProductModel getDetailProduct(String idProduct)
         {
@@ -552,7 +603,6 @@ namespace Project.NET.CSDL
             List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
             {
-                int offset = (page - 1) * limit;
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang LIMIT " + "@limit" + " OFFSET " + "@offset";
                 MySqlConnection connection = KetNoi.GetDBConnection();
                 if (connection.State == System.Data.ConnectionState.Closed)
@@ -562,7 +612,7 @@ namespace Project.NET.CSDL
                 MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", manufacturer);
                 ps.Parameters.AddWithValue("@limit", limit);
-                ps.Parameters.AddWithValue("@offset", offset);
+                ps.Parameters.AddWithValue("@offset", page);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
@@ -930,8 +980,10 @@ namespace Project.NET.CSDL
 
         public static int getTotalPageByProducer(String producer)
         {
+            int result = 0;
             try
             {
+
                 String query = "select count(*) as total from thongtinlaptop where hang = @hang";
                 MySqlConnection connection = KetNoi.GetDBConnection();
                 if (connection.State == System.Data.ConnectionState.Closed)
@@ -942,14 +994,66 @@ namespace Project.NET.CSDL
                 ps.Parameters.AddWithValue("@hang", producer);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
+                resultSet.Read();
+                result = resultSet.GetInt32("total");
                 connection.Close();
-                return resultSet.GetInt32("total");
             }
             catch (Exception e)
             {
                 throw e;
             }
-            return 0;
+            return result;
+        }
+
+        public static List<ProductModel> getCartByUser(String id_user)
+        {
+            List<ProductModel> result = new List<ProductModel>();
+
+            try
+            {
+                //cau SQL thuc thi lay thong tin laptop 
+                String querry = "Select * from THONGTINLAPTOP where malaptop in (select malaptop from CTGH where magiohang in (Select magiohang from giohang where makh = @makh))";
+                MySqlConnection connection = KetNoi.GetDBConnection();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+
+                MySqlCommand ps = connection.CreateCommand();
+                ps.Parameters.AddWithValue("@makh", id_user);
+                ps.CommandText = querry;
+                MySqlDataReader rs = ps.ExecuteReader();
+
+                while (rs.Read())
+                {
+                    ProductModel product = new ProductModel(rs.GetString(0),
+                            rs.GetString(1),
+                            rs.GetString(2),
+                            rs.GetInt32(3),
+                            rs.GetString(4),
+                            rs.GetString(5),
+                            rs.GetString(6),
+                            rs.GetString(7),
+                            rs.GetString(8),
+                            rs.GetString(9),
+                            rs.GetString(10),
+                            rs.GetString(11),
+                            rs.GetString(12),
+                            rs.GetString(13),
+                            rs.GetString(14),
+                            rs.GetString(15),
+                            rs.GetString(16),
+                            rs.GetString(17),
+                            rs.GetString(18));
+                    result.Add(product);
+                }
+                connection.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 

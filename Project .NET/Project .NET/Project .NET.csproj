@@ -275,7 +275,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\ItemStore.cs" />
+=======
+    <Compile Include="Models\HangSx.cs" />
+>>>>>>> main
     <Compile Include="Models\ManufacturerModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

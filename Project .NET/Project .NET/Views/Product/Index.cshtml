@@ -34,10 +34,31 @@
             <div class="filter-items">
                 @foreach (var manufacturer in ViewBag.manufacturers)
                 {
-                    <div class="filter-item">
-                        @manufacturer.TenHang
-                        <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
-                    </div>
+                    if (ViewBag.idHang != null)
+                    {
+                        if (ViewBag.idHang.Equals(manufacturer.TenHang))
+                        {
+                            <div class="filter-item filter-class-add" )">
+                                @manufacturer.TenHang
+                                <div class="tick" style="display: block"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="filter-item" )">
+                                @manufacturer.TenHang
+                                <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="filter-item">
+                            @manufacturer.TenHang
+                            <div class="tick"><i class="fas fa-check" style="position: absolute;  left: 7px"></i></div>
+                        </div>
+                    }
+
                 }
             </div>
         </div>
@@ -131,21 +152,21 @@
             @foreach (var product in ViewBag.products)
             {
                 <div class="hover-all-product">
-                    <a class="all-product-item" href="product-page.html">
-                        <div class="status-sale">-11%</div>
+                    <a class="all-product-item" href="/ProductDetail?id=@product.MALAPTOP1">
+                        @*<div class="status-sale">-11%</div>*@
                         <div class="img-all-product-item"
                              style="background-image: url('/Content/@product.LINKHINH11')">
                         </div>
-                        <div class="status">HẾT HÀNG</div>
+                        @*<div class="status">HẾT HÀNG</div>*@
                         <div class="infor-all-product-item">
                             @product.TENLAPTOP1
                         </div>
                         <div class="price-all-product-item">
                             @product.GIABAN1 đ
                         </div>
-                        <div class="sale-all-product-item">
-                            <span class="origin-price">33.999.000đ</span> <span>11%</span>
-                        </div>
+                        @*<div class="sale-all-product-item">
+                                <span class="origin-price">33.999.000đ</span> <span>11%</span>
+                            </div>*@
                     </a>
                 </div>
             }
@@ -155,22 +176,50 @@
     <ul class="my-pagination">
         @if (ViewBag.currentPage != 1)
         {
-            <li><a href="/Product?page=@(ViewBag.currentPage - 1)" class="paging">< Back</a></li>
+            if (ViewBag.idHang == null)
+            {
+                <li><a href="/Product?page=@(ViewBag.currentPage - 1)" class="paging">< Back</a></li>
+            }
+            else
+            {
+                <li><a href="/Product?page=@(ViewBag.currentPage - 1)&idHang=@ViewBag.idHang" class="paging">< Back</a></li>
+            }
         }
         @for (int i = 1; i < ViewBag.endPage; i++)
         {
             if (i == ViewBag.currentPage)
             {
-                <li><a href="/Product?page=@i" class="paging active">@i</a></li>
+                if (ViewBag.idHang == null)
+                {
+                    <li><a href="/Product?page=@i" class="paging active">@i</a></li>
+                }
+                else
+                {
+                    <li><a href="/Product?page=@i&idHang=@ViewBag.idHang" class="paging active">@i</a></li>
+                }
             }
             if (i != ViewBag.currentPage)
             {
-                <li><a href="/Product?page=@i" class="paging">@i</a></li>
+                if (ViewBag.idHang == null)
+                {
+                    <li><a href="/Product?page=@i" class="paging">@i</a></li>
+                }
+                else
+                {
+                    <li><a href="/Product?page=@i&idHang=@ViewBag.idHang" class="paging">@i</a></li>
+                }
             }
         }
-        @if (ViewBag.currentPage != ViewBag.endPage - 1)
+        @if (ViewBag.currentPage != ViewBag.endPage - 1 && ViewBag.endPage != 1)
         {
-            <li><a href="/Product?page=@(ViewBag.currentPage + 1) " class="paging">Continue ></a></li>
+            if (ViewBag.idHang == null)
+            {
+                <li><a href="/Product?page=@(ViewBag.currentPage + 1) " class="paging">Continue ></a></li>
+            }
+            else
+            {
+                <li><a href="/Product?page=@(ViewBag.currentPage + 1)&idHang=@ViewBag.idHang" class="paging">Continue ></a></li>
+            }
         }
     </ul>
 </div>
