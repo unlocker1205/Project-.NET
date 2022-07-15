@@ -2,6 +2,8 @@
     ViewBag.Title = "Product detail";
     Layout = "";
 }
+@model Project.NET.Models.ItemStore
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,11 +39,11 @@
                     <div class="logo" style="background-image: url('../image/logo lap/dell.png')"></div>
                 </a>
                 <div class="details bg-blue">
-                    <div class="details-number">52</div>
+                    <div class="details-number">@ViewBag.import</div>
                     <div class="details-title">Tổng số lượng nhập</div>
                 </div>
                 <div class="details bg-green">
-                    <div class="details-number">52</div>
+                    <div class="details-number">@ViewBag.inventory</div>
                     <div class="details-title">Tổng số lượng xuất</div>
                 </div>
                 <div class="details bg-red">
@@ -107,12 +109,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>V4R53500U001W</td>
-                                <td>Laptop Dell Vostro 14 3405</td>
-                                <td>Dell</td>
-                                <td>16.190.000</td>
-                            </tr>
+                            @foreach (var x in ViewBag.store)
+                            {
+                                <tr>
+                                    <td>@x.maLapTop</td>
+                                    <td>Laptop Dell Vostro 14 3405</td>
+                                    <td>Dell</td>
+                                    <td>16.190.000</td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                     <div class="clearfix">
