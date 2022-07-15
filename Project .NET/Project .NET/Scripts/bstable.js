@@ -34,7 +34,7 @@ class BSTable {
                 <button id="bEdit" type="button" class="btn btn-sm btn-default">
                     <span class="fa fa-edit" > </span>
                 </button>
-                <button id="bDel" type="button" class="btn btn-sm btn-default">
+                <button id="bDel"  type="button" class="btn btn-sm btn-default">
                     <span class="fa fa-trash" > </span>
                 </button>
                 <button id="bAcep" type="button" class="btn btn-sm btn-default" style="display:none;">
@@ -174,7 +174,7 @@ class BSTable {
       let content = $td.html();             // read content
       console.log(content);
       let div = '<div style="display: none;">' + content + '</div>';  // hide content (save for later use)
-      let input = '<input class="form-control input-sm"  data-original-value="' + content + '" value="' + content + '">';
+        let input = '<input class="form-control input-sm"  data-original-value="' + content + '" value="' + content + '">';
       $td.html(div + input);                // set content
     });
     this._actionsModeEdit(button);
