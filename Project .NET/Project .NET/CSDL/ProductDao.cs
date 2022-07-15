@@ -552,7 +552,6 @@ namespace Project.NET.CSDL
             List<ProductModel> listProductManufacturer = new List<ProductModel>();
             try
             {
-                int offset = (page - 1) * limit;
                 String query = "SELECT * FROM THONGTINLAPTOP WHERE HANG = @hang LIMIT " + "@limit" + " OFFSET " + "@offset";
                 MySqlConnection connection = KetNoi.GetDBConnection();
                 if (connection.State == System.Data.ConnectionState.Closed)
@@ -562,7 +561,7 @@ namespace Project.NET.CSDL
                 MySqlCommand ps = connection.CreateCommand();
                 ps.Parameters.AddWithValue("@hang", manufacturer);
                 ps.Parameters.AddWithValue("@limit", limit);
-                ps.Parameters.AddWithValue("@offset", offset);
+                ps.Parameters.AddWithValue("@offset", page);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
                 while (resultSet.Read())
@@ -930,8 +929,10 @@ namespace Project.NET.CSDL
 
         public static int getTotalPageByProducer(String producer)
         {
+            int result = 0;
             try
             {
+
                 String query = "select count(*) as total from thongtinlaptop where hang = @hang";
                 MySqlConnection connection = KetNoi.GetDBConnection();
                 if (connection.State == System.Data.ConnectionState.Closed)
@@ -942,14 +943,15 @@ namespace Project.NET.CSDL
                 ps.Parameters.AddWithValue("@hang", producer);
                 ps.CommandText = query;
                 MySqlDataReader resultSet = ps.ExecuteReader();
+                resultSet.Read();
+                result = resultSet.GetInt32("total");
                 connection.Close();
-                return resultSet.GetInt32("total");
             }
             catch (Exception e)
             {
                 throw e;
             }
-            return 0;
+            return result;
         }
     }
 
