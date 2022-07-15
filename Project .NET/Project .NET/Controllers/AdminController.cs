@@ -12,6 +12,13 @@ namespace Project.NET.Controllers
     {
         public static List<ProductModel> getProductForPage(int page, int numOfProducts)
         {
+
+            StoreDao storeDao = new StoreDao();
+            int[] inventoryAndImport = storeDao.getInventoryAndImport();
+            ViewBag.inventory = inventoryAndImport[0];
+            ViewBag.import = inventoryAndImport[1];
+            List<ItemStore> itemStores = storeDao.getListStore(0, 1);
+            ViewBag.store = itemStores;
             int end = page * numOfProducts;
             int start = end - numOfProducts;
             return ProductDao.getAllProduct(numOfProducts, start);

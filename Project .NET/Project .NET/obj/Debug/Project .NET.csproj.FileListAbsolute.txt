@@ -1,4 +1,143 @@
 <<<<<<< HEAD
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Project.NET.dll.config
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Project.NET.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Project.NET.pdb
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\csc.exe
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\csc.exe.config
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\csc.rsp
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\csi.exe
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\csi.exe.config
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\csi.rsp
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.Managed.Core.targets
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.AppContext.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Collections.Immutable.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Console.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Globalization.Calendars.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.IO.Compression.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.IO.FileSystem.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Net.Http.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Net.Sockets.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Reflection.Metadata.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.ValueTuple.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Xml.XmlDocument.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Xml.XPath.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\vbc.exe
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\vbc.exe.config
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\vbc.rsp
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\VBCSCompiler.exe
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\roslyn\VBCSCompiler.exe.config
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Antlr3.Runtime.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\BouncyCastle.Crypto.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Google.Protobuf.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.AWT.WinForms.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Beans.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Charsets.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Cldrdata.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Corba.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Core.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Jdbc.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Localedata.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Management.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Media.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Misc.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Naming.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Nashorn.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Remoting.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Security.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.SwingAWT.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Text.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Tools.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.Util.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.API.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.Bind.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.Crypto.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.Parse.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.Transform.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.WebServices.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.OpenJDK.XML.XPath.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.Runtime.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\IKVM.Runtime.JNI.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\K4os.Compression.LZ4.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\K4os.Compression.LZ4.Streams.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\K4os.Hash.xxHash.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Microsoft.Web.Infrastructure.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\MySql.Data.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Newtonsoft.Json.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Ninject.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Buffers.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Memory.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Net.Http.Formatting.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Numerics.Vectors.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Helpers.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Http.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Http.WebHost.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Mvc.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Optimization.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Razor.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.WebPages.Deployment.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.WebPages.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.WebPages.Razor.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Ubiety.Dns.Core.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\WebGrease.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\ZstdNet.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Google.Protobuf.pdb
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Google.Protobuf.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\K4os.Compression.LZ4.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\K4os.Compression.LZ4.Streams.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\K4os.Hash.xxHash.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\MySql.Data.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Ninject.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Buffers.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Memory.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Numerics.Vectors.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Helpers.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Mvc.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Optimization.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Razor.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.WebPages.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.WebPages.Deployment.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.WebPages.Razor.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Newtonsoft.Json.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Antlr3.Runtime.pdb
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Net.Http.Formatting.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Http.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\System.Web.Http.WebHost.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\obj\Debug\Project .NET.csproj.AssemblyReference.cache
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\obj\Debug\Project .NET.csproj.CoreCompileInputs.cache
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\obj\Debug\Project .NET.csproj.CopyComplete
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\obj\Debug\Project.NET.dll
+D:\HKI-NAM 3\lap trinh .net\ck\Project-.NET\Project .NET\Project .NET\obj\Debug\Project.NET.pdb
+=======
+<<<<<<< HEAD
 E:\Project-.NET\Project .NET\Project .NET\bin\Project.NET.dll.config
 E:\Project-.NET\Project .NET\Project .NET\bin\Project.NET.dll
 E:\Project-.NET\Project .NET\Project .NET\bin\Project.NET.pdb
@@ -274,3 +413,4 @@ E:\GocHocTap\visualStudioCode\MVC\Project-.NET\Project .NET\Project .NET\obj\Deb
 E:\GocHocTap\visualStudioCode\MVC\Project-.NET\Project .NET\Project .NET\obj\Debug\Project.NET.pdb
 E:\GocHocTap\visualStudioCode\MVC\Project-.NET\Project .NET\Project .NET\obj\Debug\Project .NET.csproj.AssemblyReference.cache
 >>>>>>> 3148f2eade12714a68b247196224da7b11027ced
+>>>>>>> main
